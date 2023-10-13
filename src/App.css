@@ -8,14 +8,15 @@
   margin:0;
   border:0;
   background-color: antiquewhite;
+  flex-direction: column;
 }
 
 
 .formulario {
   background-color: rgb(72, 1, 1);
-  height: 10em;
+  height: auto;
   width: 20em;
-  margin: 0;
+  margin-bottom: 3em;
   padding: 1em;
   display:flex;
   flex-direction: column;
@@ -51,4 +52,13 @@ color: white;
   font-size: small;
   user-select: none;
   cursor: pointer;
+}
+.titulo {
+  color: rgb(55, 146, 199);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size:2em;
+  margin-bottom: 1em;
 }
