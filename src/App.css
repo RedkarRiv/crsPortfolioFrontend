@@ -38,3 +38,17 @@
 color: white;
 
 }
+
+.botonenviar {
+  background-color: green;
+  padding: 0.3em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+  border-radius: 0.3em;
+  color: white;
+  font-size: small;
+  user-select: none;
+  cursor: pointer;
+}
