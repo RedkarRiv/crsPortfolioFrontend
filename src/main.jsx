@@ -8,7 +8,7 @@ import store from "./app/store.js";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import { Provider } from "react-redux";
-import Navbar from "./common/Navbar/Navbar.jsx";
+import  { NavbarTop } from "./common/Navbar/Navbar.jsx";
 
 const persistor = persistStore(store);
 
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <Navbar />
+          <NavbarTop />
           <App />
         </BrowserRouter>
       </PersistGate>
