@@ -89,139 +89,30 @@ const App = () => {
   return (
     <>
       <div className="containerhome">
-        <InputLabel/>
         <div className="formulario">
           <div className="titulo">LOGIN</div>
           <div className="nombrecampo">Usuario</div>
-          <input
+          <InputLabel
             type="text"
-            className="campo"
+            classDesign=""
             name="email"
-            onChange={(e) => InputHandler(e)}
+            functionHandler={(e) => InputHandler(e)}
+            placeholder="Introduce tu email"
           />
+
           <div className="nombrecampo">Password</div>
-          <input
-            className="campo"
+          <InputLabel
             type="password"
+            classDesign=""
             name="password"
-            onChange={(e) => InputHandler(e)}
+            functionHandler={(e) => InputHandler(e)}
+            placeholder="Introduce tu password"
           />
           <button className="botonenviar" onClick={(e) => logMe(e)}>
             Enviar
           </button>
         </div>
 
-        <div className="formulario">
-          <div className="titulo">REGISTRO</div>
-
-          <div className="nombrecampo">firstName</div>
-          <input
-            type="text"
-            className="campo"
-            name="firstName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">lastName</div>
-          <input
-            type="text"
-            className="campo"
-            name="lastName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">email</div>
-          <input
-            type="text"
-            className="campo"
-            name="email"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">Password</div>
-          <input
-            className="campo"
-            type="password"
-            name="password"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
-            Enviar
-          </button>
-        </div>
-
-        
-        <div className="formulario">
-          <div className="titulo">REGISTRO</div>
-
-          <div className="nombrecampo">firstName</div>
-          <input
-            type="text"
-            className="campo"
-            name="firstName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">lastName</div>
-          <input
-            type="text"
-            className="campo"
-            name="lastName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">email</div>
-          <input
-            type="text"
-            className="campo"
-            name="email"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">Password</div>
-          <input
-            className="campo"
-            type="password"
-            name="password"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
-            Enviar
-          </button>
-        </div>
-
-        
-        <div className="formulario">
-          <div className="titulo">REGISTRO</div>
-
-          <div className="nombrecampo">firstName</div>
-          <input
-            type="text"
-            className="campo"
-            name="firstName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">lastName</div>
-          <input
-            type="text"
-            className="campo"
-            name="lastName"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">email</div>
-          <input
-            type="text"
-            className="campo"
-            name="email"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">Password</div>
-          <input
-            className="campo"
-            type="password"
-            name="password"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
-            Enviar
-          </button>
-        </div>
-
-        
         <div className="formulario">
           <div className="titulo">REGISTRO</div>
 
