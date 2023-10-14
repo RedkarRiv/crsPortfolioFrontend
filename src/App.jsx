@@ -15,7 +15,8 @@ const App = () => {
 
   const InputCheck = (e) => {
     let mensajeError = CheckError(e.target.name, e.target.value);
-
+    console.log("Esto son las credenciatlsError")
+    console.log(credentialsError)
     setCredentialsError((prevState) => ({
       ...prevState,
       [e.target.name + "Error"]: mensajeError,
@@ -112,11 +113,11 @@ const App = () => {
           <div className="nombrecampo">Usuario</div>
           <InputLabel
             type="text"
-            classDesign=""
+            placeholder="Introduce tu email"
             name="email"
+            classDesign=""
             functionHandler={(e) => InputHandler(e)}
             onBlurFunction={(e)=> InputCheck(e)}
-            placeholder="Introduce tu email"
           />
 
           <div className="nombrecampo">Password</div>
@@ -126,6 +127,8 @@ const App = () => {
             name="password"
             functionHandler={(e) => InputHandler(e)}
             placeholder="Introduce tu password"
+            onBlurFunction={(e)=> InputCheck(e)}
+
           />
                     <div className="errorMessageDesign">
 
