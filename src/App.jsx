@@ -4,6 +4,7 @@ import { loginMe, registerMe } from "./services/apiCall";
 import jwt_decode from "jwt-decode";
 import { InputLabel } from "./common/InputLabel/InputLabel";
 import { CheckError } from "./services/useful";
+import { Button } from "./common/Button/Button";
 
 const App = () => {
   //CHECK FIELDS
@@ -12,12 +13,28 @@ const App = () => {
     emailError: "",
     passwordError: "",
   });
+  const [newCredentialsError, setNewCredentialsError] = useState({
+    firstName: "",
+    lastName: "",
+    emailError: "",
+    passwordError: "",
+  });
 
   const InputCheck = (e) => {
     let mensajeError = CheckError(e.target.name, e.target.value);
-    console.log("Esto son las credenciatlsError")
-    console.log(credentialsError)
+    console.log("Esto son las credenciatlsError");
+    console.log(credentialsError);
     setCredentialsError((prevState) => ({
+      ...prevState,
+      [e.target.name + "Error"]: mensajeError,
+    }));
+  };
+
+  const InputRegisterCheck = (e) => {
+    let mensajeError = CheckError(e.target.name, e.target.value);
+    console.log("Esto son las newCredenciatlsError");
+    console.log(newCredentialsError);
+    setNewCredentialsError((prevState) => ({
       ...prevState,
       [e.target.name + "Error"]: mensajeError,
     }));
@@ -48,7 +65,7 @@ const App = () => {
           user: decoded,
         };
         console.log(datosBackend);
-        setErrorMessage("")
+        setErrorMessage("");
       })
       .catch((error) => {
         console.log(error.response.data.message);
@@ -94,6 +111,8 @@ const App = () => {
                 user: decoded,
               };
               console.log(datosBackend);
+              setErrorMessage("");
+
             })
             .catch((error) => console.log(error));
         }
@@ -101,6 +120,7 @@ const App = () => {
         setTimeout(() => {}, 1000);
       })
       .catch((error) => {
+        setErrorMessage(error.response.data.message);
         console.log(error);
       });
   };
@@ -117,7 +137,7 @@ const App = () => {
             name="email"
             classDesign=""
             functionHandler={(e) => InputHandler(e)}
-            onBlurFunction={(e)=> InputCheck(e)}
+            onBlurFunction={(e) => InputCheck(e)}
           />
 
           <div className="nombrecampo">Password</div>
@@ -127,53 +147,64 @@ const App = () => {
             name="password"
             functionHandler={(e) => InputHandler(e)}
             placeholder="Introduce tu password"
-            onBlurFunction={(e)=> InputCheck(e)}
-
+            onBlurFunction={(e) => InputCheck(e)}
           />
-                    <div className="errorMessageDesign">
+          <div className="errorMessageDesign">
+            <p>{errorMessage}</p>
+          </div>
 
-<p>{errorMessage}</p>
-</div>
-          <button className="botonenviar" onClick={(e) => logMe(e)}>
-            Enviar
-          </button>
+          <Button name="Enviar" path="" functionButton={(e) => logMe(e)} />
         </div>
 
         <div className="formulario">
           <div className="titulo">REGISTRO</div>
 
-          <div className="nombrecampo">firstName</div>
-          <input
+          <div className="nombrecampo">Nombre</div>
+          <InputLabel
             type="text"
-            className="campo"
+            classDesign=""
             name="firstName"
-            onChange={(e) => InputHandlerRegister(e)}
+            functionHandler={(e) => InputHandlerRegister(e)}
+            placeholder="Introduce tu nombre"
+            onBlurFunction={(e) => InputRegisterCheck(e)}
           />
-          <div className="nombrecampo">lastName</div>
-          <input
+          <div className="nombrecampo">Apellido</div>
+          <InputLabel
             type="text"
-            className="campo"
+            classDesign=""
             name="lastName"
-            onChange={(e) => InputHandlerRegister(e)}
+            functionHandler={(e) => InputHandlerRegister(e)}
+            placeholder="Introduce tu apellido"
+            onBlurFunction={(e) => InputRegisterCheck(e)}
           />
-          <div className="nombrecampo">email</div>
-          <input
+          <div className="nombrecampo">E-mail</div>
+          <InputLabel
             type="text"
-            className="campo"
+            placeholder="Introduce tu email"
             name="email"
-            onChange={(e) => InputHandlerRegister(e)}
-          />
-          <div className="nombrecampo">Password</div>
-          <input
-            className="campo"
-            type="password"
-            name="password"
-            onChange={(e) => InputHandlerRegister(e)}
+            classDesign=""
+            functionHandler={(e) => InputHandlerRegister(e)}
+            onBlurFunction={(e) => InputRegisterCheck(e)}
           />
 
-          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
-            Enviar
-          </button>
+          <div className="nombrecampo">Password</div>
+          <InputLabel
+            type="password"
+            classDesign=""
+            name="password"
+            functionHandler={(e) => InputHandlerRegister(e)}
+            placeholder="Introduce tu password"
+            onBlurFunction={(e) => InputRegisterCheck(e)}
+          />
+          <div className="errorMessageDesign">
+            <p>{errorMessage}</p>
+          </div>
+
+          <Button
+            name="Enviar"
+            path=""
+            functionButton={(e) => registerMeHandler(e)}
+          />
         </div>
       </div>
     </>

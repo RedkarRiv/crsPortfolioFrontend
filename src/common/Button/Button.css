@@ -1,0 +1,36 @@
+.ButtonDesign {
+    height: auto;
+    width: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-radius: 0.9em;
+    background-color: #0d479f;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+    margin: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: solid 0.1em white;
+    user-select: none;
+  
+  }
+  
+  .ButtonDesign:hover {
+      border-radius: 0.9em;
+      background-color: #558911;
+    color: white;
+    transition: 0.1s;
+    border: solid 0.1em white;
+  
+  }
+  
+  .ButtonDesign:active {
+      transform: scale(0.9);
+  
+      }
