@@ -18,4 +18,4 @@ function PillsExample() {
   );
 }
 
-export default PillsExample;
+export default PillsExample;    
