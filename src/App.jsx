@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import { loginMe, registerMe } from "./services/apiCall";
 import jwt_decode from "jwt-decode";
+import { InputLabel } from "./common/InputLabel/InputLabel";
 
-function App() {
+const App = () => {
   //LOGIN
-
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -89,6 +89,7 @@ function App() {
   return (
     <>
       <div className="containerhome">
+        <InputLabel/>
         <div className="formulario">
           <div className="titulo">LOGIN</div>
           <div className="nombrecampo">Usuario</div>
@@ -145,9 +146,120 @@ function App() {
             Enviar
           </button>
         </div>
+
+        
+        <div className="formulario">
+          <div className="titulo">REGISTRO</div>
+
+          <div className="nombrecampo">firstName</div>
+          <input
+            type="text"
+            className="campo"
+            name="firstName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">lastName</div>
+          <input
+            type="text"
+            className="campo"
+            name="lastName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">email</div>
+          <input
+            type="text"
+            className="campo"
+            name="email"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">Password</div>
+          <input
+            className="campo"
+            type="password"
+            name="password"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
+            Enviar
+          </button>
+        </div>
+
+        
+        <div className="formulario">
+          <div className="titulo">REGISTRO</div>
+
+          <div className="nombrecampo">firstName</div>
+          <input
+            type="text"
+            className="campo"
+            name="firstName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">lastName</div>
+          <input
+            type="text"
+            className="campo"
+            name="lastName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">email</div>
+          <input
+            type="text"
+            className="campo"
+            name="email"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">Password</div>
+          <input
+            className="campo"
+            type="password"
+            name="password"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
+            Enviar
+          </button>
+        </div>
+
+        
+        <div className="formulario">
+          <div className="titulo">REGISTRO</div>
+
+          <div className="nombrecampo">firstName</div>
+          <input
+            type="text"
+            className="campo"
+            name="firstName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">lastName</div>
+          <input
+            type="text"
+            className="campo"
+            name="lastName"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">email</div>
+          <input
+            type="text"
+            className="campo"
+            name="email"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <div className="nombrecampo">Password</div>
+          <input
+            className="campo"
+            type="password"
+            name="password"
+            onChange={(e) => InputHandlerRegister(e)}
+          />
+          <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
+            Enviar
+          </button>
+        </div>
       </div>
     </>
   );
-}
+};
 
 export default App;
