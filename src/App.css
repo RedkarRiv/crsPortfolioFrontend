@@ -63,3 +63,8 @@ color: white;
   font-size:2em;
   margin-bottom: 1em;
 }
+
+.errorMessageDesign {
+  color: red;
+  margin-top: 0.2em;
+}

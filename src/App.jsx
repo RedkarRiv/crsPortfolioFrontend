@@ -3,8 +3,25 @@ import "./App.css";
 import { loginMe, registerMe } from "./services/apiCall";
 import jwt_decode from "jwt-decode";
 import { InputLabel } from "./common/InputLabel/InputLabel";
+import { CheckError } from "./services/useful";
 
 const App = () => {
+  //CHECK FIELDS
+  const [errorMessage, setErrorMessage] = useState("");
+  const [credentialsError, setCredentialsError] = useState({
+    emailError: "",
+    passwordError: "",
+  });
+
+  const InputCheck = (e) => {
+    let mensajeError = CheckError(e.target.name, e.target.value);
+
+    setCredentialsError((prevState) => ({
+      ...prevState,
+      [e.target.name + "Error"]: mensajeError,
+    }));
+  };
+
   //LOGIN
   const [credentials, setCredentials] = useState({
     email: "",
@@ -30,6 +47,7 @@ const App = () => {
           user: decoded,
         };
         console.log(datosBackend);
+        setErrorMessage("")
       })
       .catch((error) => {
         console.log(error.response.data.message);
@@ -97,6 +115,7 @@ const App = () => {
             classDesign=""
             name="email"
             functionHandler={(e) => InputHandler(e)}
+            onBlurFunction={(e)=> InputCheck(e)}
             placeholder="Introduce tu email"
           />
 
@@ -108,6 +127,10 @@ const App = () => {
             functionHandler={(e) => InputHandler(e)}
             placeholder="Introduce tu password"
           />
+                    <div className="errorMessageDesign">
+
+<p>{errorMessage}</p>
+</div>
           <button className="botonenviar" onClick={(e) => logMe(e)}>
             Enviar
           </button>
@@ -144,6 +167,7 @@ const App = () => {
             name="password"
             onChange={(e) => InputHandlerRegister(e)}
           />
+
           <button className="botonenviar" onClick={(e) => registerMeHandler(e)}>
             Enviar
           </button>
