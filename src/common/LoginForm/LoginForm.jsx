@@ -64,9 +64,9 @@ export const LoginForm = () => {
 
   return <>
   
-  <div className="formulario">
-          <div className="titulo">LOGIN</div>
-          <div className="nombrecampo">Usuario</div>
+  <div className="formDesign">
+          <div className="titleDesign">LOGIN</div>
+          <div className="fieldNameDesign">Usuario</div>
           <InputLabel
             type="text"
             placeholder="Introduce tu email"
@@ -76,7 +76,7 @@ export const LoginForm = () => {
             onBlurFunction={(e) => InputCheck(e)}
           />
 
-          <div className="nombrecampo">Password</div>
+          <div className="fieldNameDesign">Password</div>
           <InputLabel
             type="password"
             classDesign=""

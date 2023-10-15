@@ -1,0 +1,28 @@
+
+.formDesign {
+    height: auto;
+    width: auto;
+    padding: 0.8em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5em;
+  }
+    
+  .fieldNameDesign {
+    color:black;
+    }
+  .titleDesign {
+    color: rgb(55, 146, 199);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size:2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .errorMessageDesign {
+    color: red;
+  }

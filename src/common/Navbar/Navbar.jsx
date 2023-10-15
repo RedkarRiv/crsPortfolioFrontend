@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = () => {
+
+  //REDUX
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -19,10 +21,12 @@ export const NavbarTop = () => {
     setNewToken(credentialsRdx.credentials.token);
   }, [credentialsRdx]);
 
+//LOGOUT
   const logOut = () => {
     dispatch(userout());
     navigate("/");
   };
+  
 
   return (
     <div className="m-0 p-0">

@@ -74,68 +74,78 @@ export const RegisterForm = () => {
               setErrorMessage("");
             })
             .catch((error) => console.log(error));
+          setErrorMessage(error.response.data.message);
         }
 
         setTimeout(() => {}, 1000);
       })
       .catch((error) => {
         console.log(error);
-
+        setErrorMessage(error.response.data.message);
       });
   };
 
   return (
     <>
-      <form className="formularioReg">
-        <div className="titulo">REGISTRO</div>
-
-        <div className="nombrecampo">Nombre</div>
+      <form className="registerFormDesign d-flex flex-column justify-content-center align-items-center">
+        <div className="titleDesign">REGISTRO</div>
+        <div className="fieldNameDesign">Nombre</div>
         <InputLabel
           type="text"
-          classDesign=""
+          classDesign="mb-2"
           name="firstName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu nombre"
           onBlurFunction={(e) => InputRegisterCheck(e)}
-        />
-        <div className="nombrecampo">Apellido</div>
+        />{" "}
+        <div className="errorDataDesign">
+          <p>{newCredentialsError.firstNameError}</p>
+        </div>
+        <div className="fieldNameDesign">Apellido</div>
         <InputLabel
           type="text"
-          classDesign=""
+          classDesign="mb-2"
           name="lastName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu apellido"
           onBlurFunction={(e) => InputRegisterCheck(e)}
-        />
-        <div className="nombrecampo">E-mail</div>
+        />{" "}
+        <div className="errorDataDesign">
+          <p>{newCredentialsError.lastNameError}</p>
+        </div>
+        <div className="fieldNameDesign">E-mail</div>
         <InputLabel
           type="text"
           placeholder="Introduce tu email"
           name="email"
-          classDesign=""
+          classDesign="mb-2"
           functionHandler={(e) => InputHandlerRegister(e)}
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
-
-        <div className="nombrecampo">Password</div>
+        <div className="errorDataDesign">
+          <p>{newCredentialsError.emailError}</p>
+        </div>
+        <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign=""
+          classDesign="mb-2"
           name="password"
           autoComplete="current-password"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu password"
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
-        <div className="errorMessageDesign">
-          <p>{errorMessage}</p>
+        <div className="errorDataDesign">
+          <p>{newCredentialsError.passwordError}</p>
         </div>
-
         <Button
           name="Enviar"
           path=""
           functionButton={(e) => registerMeHandler(e)}
         />
+        <div className="errorMessageDesign">
+          <p>{errorMessage}</p>
+        </div>
       </form>
     </>
   );
