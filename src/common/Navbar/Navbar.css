@@ -3,14 +3,13 @@
 }
 
 .avatarAccoutDesign {
-  width: 2em;
+  width: 1.5em;
+  filter: invert(100%);
+
 }
 
-.crsLOGODesign {
-  width: 7em;
-  
-}
+
 
 .navbarDesign {
-    background-color: rgb(153, 153, 153);
+  background-color: rgb(1, 6, 77);
 }

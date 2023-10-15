@@ -3,9 +3,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import AccountAvatar from "../../img/avatarAccount.png";
-import crsLOGO2 from "../../img/crsLogo2.png";
-import crsLOGO4 from "../../img/crsLogo4.png";
-import crsLOGO5 from "../../img/crsLogo5.png";
 
 export const NavbarTop = () => {
   return (
@@ -13,12 +10,11 @@ export const NavbarTop = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="navbarDesign text-white
+        className="navbarDesign text-white navbar-dark p-3
         "
       >
         <Container className="">
-          <Navbar.Brand href="#home" className="ps-2">
-            <img src={crsLOGO5} alt="Mi cuenta" className="crsLOGODesign" />
+          <Navbar.Brand href="#home" className="ps-2">Carlos Redondo
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -32,11 +28,11 @@ export const NavbarTop = () => {
               </Nav>
             </Nav>
 
-            <Nav className="loginRegisterButtons text-light">
+            {/* <Nav className="loginRegisterButtons text-light">
               <div className="p-1">Login</div>
               <div className="p-1">Registro</div>
-            </Nav>
-            {/* <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
+            </Nav> */}
+            <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
               <div className="p-1">
                 {" "}
                 <img
@@ -46,7 +42,7 @@ export const NavbarTop = () => {
                 />
               </div>
               <div className="p-1">Perfil</div>
-            </Nav> */}
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
