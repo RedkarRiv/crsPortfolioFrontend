@@ -41,7 +41,7 @@ export const NavbarTop = () => {
             onClick={() => navigate("/")}
             className="ps-2 logoDesign"
           >
-            Carlos Redondo
+           ❉ Carlos Redondo ❉
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

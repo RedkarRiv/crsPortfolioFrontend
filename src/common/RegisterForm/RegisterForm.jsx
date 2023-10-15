@@ -139,7 +139,7 @@ export const RegisterForm = () => {
           <p>{newCredentialsError.passwordError}</p>
         </div>
         <Button
-          name="Enviar"
+          name="Registrarme"
           path=""
           functionButton={(e) => registerMeHandler(e)}
         />
