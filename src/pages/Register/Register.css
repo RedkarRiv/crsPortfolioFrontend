@@ -1,17 +1,16 @@
 .registerBackgroundDesign {
-  background-color: rgb(255, 230, 184);
+  background: white;
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
 }
 
 .formContainer {
-background-color: rgb(222, 222, 222);
 border-radius: 0.5em;
 }
 
 .registerClaim {
-  background: white;
+  background-color: rgb(19, 33, 111);
   width: 70%;
   height:auto;
   border-radius: 0.5em;

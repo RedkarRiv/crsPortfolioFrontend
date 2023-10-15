@@ -33,13 +33,13 @@ export const NavbarTop = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="navbarDesign text-white navbar-dark p-3
+        className="navbarDesign text-white navbar-dark p-3 m-0
         "
       >
-        <Container>
+        <Container className="m-0 p-0">
           <Navbar.Brand
             onClick={() => navigate("/")}
-            className="ps-2 logoDesign"
+            className="ps-md-5 logoDesign"
           >
            ❉ Carlos Redondo ❉
           </Navbar.Brand>

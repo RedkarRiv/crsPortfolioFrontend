@@ -7,14 +7,14 @@ import { Container, Row, Col } from "react-bootstrap";
 export const Register = () => {
   return (
     <>
-      <div className="registerBackgroundDesign d-flex justify-content-around align-items-center p-0 m-0">
+      <div className="registerBackgroundDesign d-flex justify-content-around align-items-start p-0 m-0 mt-md-4">
         <Container className="p-0 m-0 d-flex justify-content-center align-items-center">
           <Row  className="registerClaim w-100 d-flex align-items-center justify-content-center p-2">
             <Col className="formContainer col-12 col-md-6 d-flex justify-content-center align-items-center">
               <RegisterForm />
             </Col>
             <Col className="col-12 col-md-6">
-              <p className="text-center">
+              <p className="text-center text-light py-5">
                 Lorem fistrum me cago en tus muelas ahorarr pecador la caidita
                 quietooor ese pedazo de. De la pradera diodenoo te va a hasé
                 pupitaa tiene musho peligro. Al ataquerl apetecan a wan está la
