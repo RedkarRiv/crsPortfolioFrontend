@@ -1,8 +1,16 @@
-
 .loginRegisterButtons {
   font-size: 70%;
 }
 
 .avatarAccoutDesign {
-    width: 2em;
+  width: 2em;
+}
+
+.crsLOGODesign {
+  width: 7em;
+  
+}
+
+.navbarDesign {
+    background-color: rgb(153, 153, 153);
 }
