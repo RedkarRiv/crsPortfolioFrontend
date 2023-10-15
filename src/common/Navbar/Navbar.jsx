@@ -16,24 +16,58 @@ export const NavbarTop = () => {
         className="navbarDesign text-white navbar-dark p-3
         "
       >
-        <Container className="">
-          <Navbar.Brand onClick={() => navigate("/")} className="ps-2">Carlos Redondo
+        <Container>
+          <Navbar.Brand
+            onClick={() => navigate("/")}
+            className="ps-2 logoDesign"
+          >
+            Carlos Redondo
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto w-100 d-flex justify-content-center align-items-center">
               <Nav className="w-75 d-flex justify-content-around align-items-center">
-                <div href="#features">Home</div>
-                <div href="#pricing">BlogSIM</div>
-                <div href="#pricing">ShopSIM</div>
-                <div href="#pricing">GamesSIM</div>
-                <div href="#pricing">BOTSIM</div>
+                <div
+                  className="navbarOptionDesign"
+                  onClick={() => navigate("/")}
+                >
+                  Home
+                </div>
+                <div
+                  className="navbarOptionDesign"
+                  onClick={() => navigate("/")}
+                >
+                  BlogSIM
+                </div>
+                <div
+                  className="navbarOptionDesign"
+                  onClick={() => navigate("/")}
+                >
+                  ShopSIM
+                </div>
+                <div
+                  className="navbarOptionDesign"
+                  onClick={() => navigate("/")}
+                >
+                  GamesSIM
+                </div>
+                <div
+                  className="navbarOptionDesign"
+                  onClick={() => navigate("/")}
+                >
+                  BOTSIM
+                </div>
               </Nav>
             </Nav>
 
-            <Nav className="loginRegisterButtons text-light">
-              <div className="p-1">Login</div>
-              <div className="p-1" onClick={() => navigate("/register")}>Registro</div>
+            <Nav className="text-light card-subtitle">
+              <div className="p-1 me-3 loginButton">Login</div>
+              <div
+                className="p-1 registerButton"
+                onClick={() => navigate("/register")}
+              >
+                Registro
+              </div>
             </Nav>
             {/* <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
               <div className="p-1">

@@ -1,15 +1,38 @@
 .navbarDesign {
   background-color: rgb(1, 6, 77);
+  user-select: none;
+}
+.logoDesign {
+  cursor: pointer;
 }
 
+.logoDesign:hover {
+transform: scale(1.2);}
 
+.navbarOptionDesign {
+  cursor: pointer;
+  padding: 0.5em;
+  border-bottom: 0.1em transparent solid;
+}
 
-.loginRegisterButtons {
+.navbarOptionDesign:hover {
+  border-bottom: 0.1em white solid;
+}
+
+.loginButton,
+.registerButton {
   font-size: 70%;
+  cursor: pointer;
+  border-radius: 1em;
 }
 
-.avatarAccoutDesign {
+.loginButton:hover,
+.registerButton:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 6, 77);
+}
+
+.avatarAccountDesign {
   width: 1.5em;
   filter: invert(100%);
 }
-

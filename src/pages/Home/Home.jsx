@@ -13,28 +13,12 @@ export const Home = () => {
     emailError: "",
     passwordError: "",
   });
-  const [newCredentialsError, setNewCredentialsError] = useState({
-    firstName: "",
-    lastName: "",
-    emailError: "",
-    passwordError: "",
-  });
 
   const InputCheck = (e) => {
     let mensajeError = CheckError(e.target.name, e.target.value);
     console.log("Esto son las credenciatlsError");
     console.log(credentialsError);
     setCredentialsError((prevState) => ({
-      ...prevState,
-      [e.target.name + "Error"]: mensajeError,
-    }));
-  };
-
-  const InputRegisterCheck = (e) => {
-    let mensajeError = CheckError(e.target.name, e.target.value);
-    console.log("Esto son las newCredenciatlsError");
-    console.log(newCredentialsError);
-    setNewCredentialsError((prevState) => ({
       ...prevState,
       [e.target.name + "Error"]: mensajeError,
     }));
@@ -73,58 +57,6 @@ export const Home = () => {
       });
   };
 
-  //REGISTER
-
-  const [newCredentials, setNewCredentials] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
-
-  const InputHandlerRegister = (e) => {
-    setNewCredentials((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
-    console.log(newCredentials);
-  };
-
-  const registerMeHandler = () => {
-    registerMe(newCredentials)
-      .then((resultado) => {
-        if (resultado.data.message == "No ha sido posible crear la cuenta") {
-          setErrorMessage("Ya existe una cuenta con ese DNI o ese email");
-        }
-
-        if (resultado.data.id !== "undefined") {
-          const instantLoginCredentials = {
-            email: resultado.data.email,
-            password: newCredentials.password,
-          };
-          loginMe(instantLoginCredentials)
-            .then((resultado) => {
-              let decoded = jwt_decode(resultado.data.token);
-              console.log(resultado);
-              let datosBackend = {
-                token: resultado.data.token,
-                user: decoded,
-              };
-              console.log(datosBackend);
-              setErrorMessage("");
-
-            })
-            .catch((error) => console.log(error));
-        }
-
-        setTimeout(() => {}, 1000);
-      })
-      .catch((error) => {
-        setErrorMessage(error.response.data.message);
-        console.log(error);
-      });
-  };
-
   return (
     <>
       <div className="containerhome">
@@ -155,10 +87,7 @@ export const Home = () => {
 
           <Button name="Enviar" path="" functionButton={(e) => logMe(e)} />
         </div>
-
-     
       </div>
     </>
   );
 };
-
