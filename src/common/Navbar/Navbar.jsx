@@ -1,12 +1,28 @@
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import AccountAvatar from "../../img/avatarAccount.png";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const credentialsRdx = useSelector(userDataCheck);
+  const [newToken, setNewToken] = useState("");
+
+  useEffect(() => {
+    setNewToken(credentialsRdx.credentials.token);
+  }, [credentialsRdx]);
+
+  const logOut = () => {
+    dispatch(userout());
+    navigate("/");
+  };
 
   return (
     <div className="m-0 p-0">
@@ -60,26 +76,31 @@ export const NavbarTop = () => {
               </Nav>
             </Nav>
 
-            <Nav className="text-light card-subtitle">
-              <div className="p-1 me-3 loginButton">Login</div>
-              <div
-                className="p-1 registerButton"
-                onClick={() => navigate("/register")}
-              >
-                Registro
-              </div>
-            </Nav>
-            {/* <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
-              <div className="p-1">
-                {" "}
-                <img
-                  src={AccountAvatar}
-                  alt="Mi cuenta"
-                  className="avatarAccoutDesign"
-                />
-              </div>
-              <div className="p-1">Perfil</div>
-            </Nav> */}
+            {newToken ? (
+              <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
+                <div className="p-1" onClick={() => navigate("/profile")}>
+                  {" "}
+                  <img
+                    src={AccountAvatar}
+                    alt="Mi cuenta"
+                    className="avatarAccountDesign"
+                  />
+                </div>
+                <div className="p-1 exitButton" onClick={() => logOut()}>
+                  Logout
+                </div>
+              </Nav>
+            ) : (
+              <Nav className="text-light card-subtitle">
+                <div className="p-1 me-3 loginButton">Login</div>
+                <div
+                  className="p-1 registerButton"
+                  onClick={() => navigate("/register")}
+                >
+                  Registro
+                </div>
+              </Nav>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

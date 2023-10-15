@@ -7,7 +7,8 @@
 }
 
 .logoDesign:hover {
-transform: scale(1.2);}
+  transform: scale(1.2);
+}
 
 .navbarOptionDesign {
   cursor: pointer;
@@ -20,7 +21,8 @@ transform: scale(1.2);}
 }
 
 .loginButton,
-.registerButton {
+.registerButton,
+.profileButton {
   font-size: 70%;
   cursor: pointer;
   border-radius: 1em;
@@ -35,4 +37,12 @@ transform: scale(1.2);}
 .avatarAccountDesign {
   width: 1.5em;
   filter: invert(100%);
+}
+.profileButtons {
+  cursor: pointer;
+  user-select: none;
+}
+
+.exitButton {
+  font-size: 70%;
 }

@@ -6,8 +6,12 @@ import { Button } from "../../common/Button/Button";
 import jwt_decode from "jwt-decode";
 import "./RegisterForm.css";
 import { loginMe, registerMe } from "../../services/apiCall";
+import { useDispatch } from "react-redux";
+import { login } from "../../pages/userSlice";
 
 export const RegisterForm = () => {
+  const dispatch = useDispatch();
+
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
   const [newCredentialsError, setNewCredentialsError] = useState({
@@ -65,6 +69,8 @@ export const RegisterForm = () => {
                 user: decoded,
               };
               console.log(datosBackend);
+              dispatch(login({ credentials: datosBackend }));
+
               setErrorMessage("");
             })
             .catch((error) => console.log(error));
