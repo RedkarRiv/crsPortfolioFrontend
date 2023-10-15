@@ -3,6 +3,8 @@
   width: 100%;
   padding: 0.8em;
   border-radius: 0.5em;
+  padding-right: 3em;
+  padding-left: 3em;
 }
   
 .fieldNameDesign {
@@ -17,6 +19,7 @@
   align-self: center;
   font-size:2em;
   margin-bottom: 0.5em;
+
 }
 
 .errorMessageDesign {
