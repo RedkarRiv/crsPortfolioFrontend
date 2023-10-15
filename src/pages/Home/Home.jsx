@@ -156,56 +156,7 @@ export const Home = () => {
           <Button name="Enviar" path="" functionButton={(e) => logMe(e)} />
         </div>
 
-        <div className="formulario">
-          <div className="titulo">REGISTRO</div>
-
-          <div className="nombrecampo">Nombre</div>
-          <InputLabel
-            type="text"
-            classDesign=""
-            name="firstName"
-            functionHandler={(e) => InputHandlerRegister(e)}
-            placeholder="Introduce tu nombre"
-            onBlurFunction={(e) => InputRegisterCheck(e)}
-          />
-          <div className="nombrecampo">Apellido</div>
-          <InputLabel
-            type="text"
-            classDesign=""
-            name="lastName"
-            functionHandler={(e) => InputHandlerRegister(e)}
-            placeholder="Introduce tu apellido"
-            onBlurFunction={(e) => InputRegisterCheck(e)}
-          />
-          <div className="nombrecampo">E-mail</div>
-          <InputLabel
-            type="text"
-            placeholder="Introduce tu email"
-            name="email"
-            classDesign=""
-            functionHandler={(e) => InputHandlerRegister(e)}
-            onBlurFunction={(e) => InputRegisterCheck(e)}
-          />
-
-          <div className="nombrecampo">Password</div>
-          <InputLabel
-            type="password"
-            classDesign=""
-            name="password"
-            functionHandler={(e) => InputHandlerRegister(e)}
-            placeholder="Introduce tu password"
-            onBlurFunction={(e) => InputRegisterCheck(e)}
-          />
-          <div className="errorMessageDesign">
-            <p>{errorMessage}</p>
-          </div>
-
-          <Button
-            name="Enviar"
-            path=""
-            functionButton={(e) => registerMeHandler(e)}
-          />
-        </div>
+     
       </div>
     </>
   );

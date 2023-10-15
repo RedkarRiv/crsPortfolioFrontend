@@ -1,3 +1,9 @@
+.navbarDesign {
+  background-color: rgb(1, 6, 77);
+}
+
+
+
 .loginRegisterButtons {
   font-size: 70%;
 }
@@ -5,11 +11,5 @@
 .avatarAccoutDesign {
   width: 1.5em;
   filter: invert(100%);
-
 }
 
-
-
-.navbarDesign {
-  background-color: rgb(1, 6, 77);
-}

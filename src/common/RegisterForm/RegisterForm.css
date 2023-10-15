@@ -1,22 +1,9 @@
-.containerhome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100vw;
-    padding:1em;
-    margin:0;
-    border:0;
-    background-color: rgb(218, 210, 210);
-    flex-direction: column;
-    overflow-x: hidden;
-  }
+
   
-  
-  .formulario {
+  .formularioReg {
     background-color: rgb(72, 1, 1);
-    height: auto;
-    width: 20em;
+    height: 100%;
+    width: 100%;
     margin-bottom: 3em;
     padding: 0.8em;
     display:flex;
