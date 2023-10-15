@@ -8,9 +8,11 @@ import "./RegisterForm.css";
 import { loginMe, registerMe } from "../../services/apiCall";
 import { useDispatch } from "react-redux";
 import { login } from "../../pages/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
@@ -19,10 +21,12 @@ export const RegisterForm = () => {
     lastName: "",
     emailError: "",
     passwordError: "",
+    doubleCheckPasswordError: "",
+
   });
 
-  const InputRegisterCheck = (e) => {
-    let mensajeError = CheckError(e.target.name, e.target.value);
+  const InputRegisterCheck = (e, password) => {
+    let mensajeError = CheckError(e.target.name, e.target.value, password);
     console.log("Esto son las newCredenciatlsError");
     console.log(newCredentialsError);
     setNewCredentialsError((prevState) => ({
@@ -70,7 +74,7 @@ export const RegisterForm = () => {
               };
               console.log(datosBackend);
               dispatch(login({ credentials: datosBackend }));
-
+              navigate("/home");
               setErrorMessage("");
             })
             .catch((error) => console.log(error));
@@ -81,7 +85,6 @@ export const RegisterForm = () => {
       })
       .catch((error) => {
         console.log(error);
-        setErrorMessage(error.response.data.message);
       });
   };
 
@@ -92,7 +95,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Nombre</div>
         <InputLabel
           type="text"
-          classDesign="mb-2"
+          classDesign=""
           name="firstName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu nombre"
@@ -104,7 +107,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Apellido</div>
         <InputLabel
           type="text"
-          classDesign="mb-2"
+          classDesign=""
           name="lastName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu apellido"
@@ -118,7 +121,7 @@ export const RegisterForm = () => {
           type="text"
           placeholder="Introduce tu email"
           name="email"
-          classDesign="mb-2"
+          classDesign=""
           functionHandler={(e) => InputHandlerRegister(e)}
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
@@ -128,7 +131,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign="mb-2"
+          classDesign=""
           name="password"
           autoComplete="current-password"
           functionHandler={(e) => InputHandlerRegister(e)}
@@ -138,8 +141,21 @@ export const RegisterForm = () => {
         <div className="errorDataDesign">
           <p>{newCredentialsError.passwordError}</p>
         </div>
+        <div className="fieldNameDesign">Repite Password</div>
+
+        <InputLabel
+          type="password"
+          classDesign=""
+          name="doubleCheckPassword"
+          functionHandler={(e) => InputHandlerRegister(e)}
+          placeholder="Repite tu password"
+          onBlurFunction={(e) => InputRegisterCheck(e, newCredentials.password)}
+        />
+        <div className="errorDataDesign">
+          <p>{newCredentialsError.doubleCheckPasswordError }</p>
+        </div>
         <Button
-          name="Registrarme"
+          name="Crear cuenta"
           path=""
           functionButton={(e) => registerMeHandler(e)}
         />

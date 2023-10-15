@@ -1,6 +1,6 @@
 .registerFormDesign {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   padding: 0.8em;
   border-radius: 0.5em;
 }

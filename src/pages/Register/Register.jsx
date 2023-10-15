@@ -7,11 +7,11 @@ export const Register = () => {
   return (
     <>
       <div className="registerBackgroundDesign d-flex justify-content-around align-items-center flex-row">
-        <div className="registerClaim d-flex align-items-center p-2">
-          <div className="formContainer w-25 d-flex justify-content-center align-items-center">
+        <div className="registerClaim d-flex align-items-start p-4">
+          <div className="formContainer w-50 d-flex justify-content-start align-items-start">
             <RegisterForm />
           </div>
-          <div className="registerClaimInfo w-75 p-4">
+          <div className="registerClaimInfo w-50 ps-4">
             <p>
               Lorem fistrum me cago en tus muelas ahorarr pecador la caidita
               quietooor ese pedazo de. De la pradera diodenoo te va a hasé
@@ -27,22 +27,8 @@ export const Register = () => {
               se calle ustée te va a hasé pupitaa a gramenawer se calle ustée
               benemeritaar tiene musho peligro. A peich apetecan te va a hasé
               pupitaa pecador pecador. Jarl ese pedazo de tiene musho peligro
-              por la gloria de mi madre te va a hasé pupitaa por la gloria de mi
-              madre me cago en tus muelas me cago en tus muelas a gramenawer
-              está la cosa muy malar. Jarl de la pradera a peich papaar papaar
-              torpedo ese pedazo de diodenoo. Pecador te voy a borrar el cerito
-              llevame al sircoo ese que llega hasta luego Lucas hasta luego
-              Lucas a wan te voy a borrar el cerito. Está la cosa muy malar
-              torpedo torpedo te va a hasé pupitaa. Qué dise usteer amatomaa al
-              ataquerl condemor amatomaa mamaar pecador pecador. Diodenoo
-              amatomaa pecador pecador diodeno benemeritaar llevame al sircoo
-              está la cosa muy malar ese pedazo de jarl hasta luego Lucas. De la
-              pradera a gramenawer no puedor pupita la caidita. De la pradera va
-              usté muy cargadoo ese pedazo de la caidita. Condemor benemeritaar
-              de la pradera jarl me cago en tus muelas ese pedazo de quietooor
-              hasta luego Lucas ese hombree. Sexuarl te voy a borrar el cerito
-              diodenoo de la pradera jarl. Papaar papaar ese pedazo de a wan
-              pupita.
+            
+             
             </p>
           </div>
         </div>
