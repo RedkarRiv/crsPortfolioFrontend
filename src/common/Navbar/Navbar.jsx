@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = () => {
-
   //REDUX
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -21,27 +20,26 @@ export const NavbarTop = () => {
     setNewToken(credentialsRdx.credentials.token);
   }, [credentialsRdx]);
 
-//LOGOUT
+  //LOGOUT
   const logOut = () => {
     dispatch(userout());
     navigate("/");
   };
-  
 
   return (
     <div className="m-0 p-0">
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="navbarDesign text-white navbar-dark p-3 m-0
+        className="navbarDesign text-white navbar-dark p-3 m-0 d-flex justify-content-center
         "
       >
-        <Container className="m-0 p-0">
+        <Container className="m-0 p-0 w-100">
           <Navbar.Brand
             onClick={() => navigate("/")}
             className="ps-md-5 logoDesign"
           >
-           ❉ Carlos Redondo ❉
+            ❉ Carlos Redondo ❉
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -81,7 +79,7 @@ export const NavbarTop = () => {
             </Nav>
 
             {newToken ? (
-              <Nav className="profileButtons w-auto text-light d-flex justify-content-center align-items-center text-center">
+              <Nav className="profileButtons w-25 text-light d-flex justify-content-center align-items-center text-center">
                 <div className="p-1" onClick={() => navigate("/profile")}>
                   {" "}
                   <img
@@ -95,15 +93,15 @@ export const NavbarTop = () => {
                 </div>
               </Nav>
             ) : (
-              <Nav className="text-light card-subtitle">
-                <div className="p-1 me-3 loginButton">Login</div>
-                <div
-                  className="p-1 registerButton"
-                  onClick={() => navigate("/register")}
-                >
-                  Registro
-                </div>
-              </Nav>
+                <Nav className="text-light w-25 d-flex justify-content-center align-items-center">
+                  <div className="p-1 me-3 loginButton">Login</div>
+                  <div
+                    className="p-1 registerButton"
+                    onClick={() => navigate("/register")}
+                  >
+                    Registro
+                  </div>
+                </Nav>
             )}
           </Navbar.Collapse>
         </Container>

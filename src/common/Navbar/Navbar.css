@@ -46,3 +46,7 @@
 .exitButton {
   font-size: 70%;
 }
+
+.authButtons {
+  width: 5%;
+}
