@@ -1,15 +1,26 @@
 .containerhome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100vw;
-    padding:1em;
-    margin:0;
-    border:0;
-    background-color: rgb(169, 165, 165);
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  
-  
+  min-height: 100vh;
+  width: 100vw;
+  padding: 1em;
+  margin: 0;
+  border: 0;
+  background-color: rgb(192, 180, 180);
+  overflow-x: hidden;
+}
+
+.slidePhoto {
+  background-color: white;
+  background-image: url("../../img/crsPhoto.jpg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 45% 10%;
+  height: 75vh; /* Altura del div en rem */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 80%);
+
+}
+
+.slideDescription {
+  background-color: rgb(29, 64, 204);
+  height: 75vh; /* Altura del div en rem */  
+  clip-path: polygon(100% 0%, 0% 0%, 0% 50%, 100% 80%);
+}
