@@ -10,21 +10,17 @@ export const Register = () => {
       <div className="registerBackgroundDesign d-flex justify-content-around align-items-start p-0 m-0 mt-md-4">
         <Container className="p-0 m-0 d-flex justify-content-center align-items-center">
           <Row  className="registerClaim w-100 d-flex align-items-center justify-content-around p-2">
-            <Col className="formContainer col-12 col-md-4 d-flex justify-content-center align-items-center">
+            <Col className="formContainer col-12 col-md-4 d-flex justify-content-center align-items-start">
               <RegisterForm />
             </Col>
-            <Col className="col-12 col-md-6">
-              <div className="imgContainer">
+            <Col className="col-12 col-md-6 mt-2 mt-md-0 pt-md-4">
+              <div className="imgContainer m-0">
 
               </div>
               
-              <p className="text-center text-light py-5">
+              <p className="text-center registerTextDesign py-5">
                 Lorem fistrum me cago en tus muelas ahorarr pecador la caidita
-                quietooor ese pedazo de. De la pradera diodenoo te va a hasé
-                pupitaa tiene musho peligro. Al ataquerl apetecan a wan está la
-                cosa muy malar apetecan hasta luego Lucas a peich benemeritaar
-                diodenoo. Tiene musho peligro la caidita va usté muy cargadoo
-                caballo blanco caballo negroorl ese hombree te va a hasé pupitaa
+                quietooor ese pedazo de. 
               </p>
             </Col>
           </Row>

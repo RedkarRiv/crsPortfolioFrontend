@@ -22,6 +22,12 @@ border-radius: 0.5em;
   background-image: url(../../img/bgRegisterSlide.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  border-radius:0.2em;
+}
+
+.registerTextDesign {
+  color: white;
+  font-size: 200%;
 }
 
 @media (max-width: 576px) {
