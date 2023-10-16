@@ -22,7 +22,6 @@ export const RegisterForm = () => {
     emailError: "",
     passwordError: "",
     doubleCheckPasswordError: "",
-
   });
 
   const InputRegisterCheck = (e, password) => {
@@ -85,8 +84,7 @@ export const RegisterForm = () => {
       })
       .catch((error) => {
         console.log(error);
-        setErrorMessage(error.response.data.message)
-
+        setErrorMessage(error.response.data.message);
       });
   };
 
@@ -144,7 +142,6 @@ export const RegisterForm = () => {
           <div>{newCredentialsError.passwordError}</div>
         </div>
         <div className="fieldNameDesign">Repite Password</div>
-
         <InputLabel
           type="password"
           classDesign=""
@@ -154,9 +151,10 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e, newCredentials.password)}
         />
         <div className="errorDataDesign">
-          <div>{newCredentialsError.doubleCheckPasswordError }</div>
+          <div>{newCredentialsError.doubleCheckPasswordError}</div>
         </div>
         <Button
+          className="buttonAuthColor"
           name="Crear cuenta"
           path=""
           functionButton={(e) => registerMeHandler(e)}

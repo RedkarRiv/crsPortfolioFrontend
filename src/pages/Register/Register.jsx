@@ -35,6 +35,8 @@ export const Register = () => {
                 </p>
                 <div className="w-100 d-flex justify-content-center p-3">
                   <Button
+                            className="buttonAuthColor"
+
                     name="Más información"
                     path="/"
                     functionButton={(e) => onClick(e)}

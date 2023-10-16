@@ -9,7 +9,7 @@ import { login } from "../../pages/userSlice";
 import { useDispatch } from "react-redux";
 
 export const LoginForm = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
@@ -62,36 +62,40 @@ export const LoginForm = () => {
       });
   };
 
-  return <>
-  
-  <div className="formDesign">
-          <div className="titleDesign">LOGIN</div>
-          <div className="fieldNameDesign">Usuario</div>
-          <InputLabel
-            type="text"
-            placeholder="Introduce tu email"
-            name="email"
-            classDesign=""
-            functionHandler={(e) => InputHandler(e)}
-            onBlurFunction={(e) => InputCheck(e)}
-          />
+  return (
+    <>
+      <div className="formDesign">
+        <div className="titleDesign">LOGIN</div>
+        <div className="fieldNameDesign">Usuario</div>
+        <InputLabel
+          type="text"
+          placeholder="Introduce tu email"
+          name="email"
+          classDesign=""
+          functionHandler={(e) => InputHandler(e)}
+          onBlurFunction={(e) => InputCheck(e)}
+        />
 
-          <div className="fieldNameDesign">Password</div>
-          <InputLabel
-            type="password"
-            classDesign=""
-            name="password"
-            functionHandler={(e) => InputHandler(e)}
-            placeholder="Introduce tu password"
-            onBlurFunction={(e) => InputCheck(e)}
-          />
-          <div className="errorMessageDesign my-2">
-            <p className="m-0">{errorMessage}</p>
-          </div>
-
-          <Button name="Enviar" path="" functionButton={(e) => logMe(e)} />
+        <div className="fieldNameDesign">Password</div>
+        <InputLabel
+          type="password"
+          classDesign=""
+          name="password"
+          functionHandler={(e) => InputHandler(e)}
+          placeholder="Introduce tu password"
+          onBlurFunction={(e) => InputCheck(e)}
+        />
+        <div className="errorMessageDesign my-2">
+          <p className="m-0">{errorMessage}</p>
         </div>
-  
-  
-  </>;
+
+        <Button
+          className="buttonAuthColor"
+          name="Enviar"
+          path=""
+          functionButton={(e) => logMe(e)}
+        />
+      </div>
+    </>
+  );
 };

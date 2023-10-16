@@ -19,10 +19,9 @@
 
 .slideDescription {
   background-color: rgb(29, 64, 204);
-  height: 60vh; 
+  height: 60vh;
   clip-path: polygon(100% 0%, 0% 0%, 0% 70%, 100% 100%);
 }
-
 
 .homeTitleDesign {
   color: white;
@@ -38,17 +37,31 @@
   font-weight: bold;
 }
 
+.logoHomeDesign {
+  margin-top: -6em;
+  width: 20%;
+  filter: invert(100%);
+}
+
+.buttonHomeColor {
+  background-color: rgb(255, 43, 1);
+  color: white;
+}
 @media (max-width: 576px) {
   .slidePhoto {
     background-position: 50% -2%;
     background-size: cover;
-
   }
   .homeSubtitleDesign,
   .homeTitleDesign {
     font-size: 100%;
   }
-  .slideDescription, .slidePhoto {
+  .slideDescription,
+  .slidePhoto {
     height: 50vh;
+  }
+  .logoHomeDesign {
+    margin-top: -3em;
+    width: 50%;
   }
 }
