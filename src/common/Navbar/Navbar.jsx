@@ -5,12 +5,20 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import AccountAvatar from "../../img/avatarAccount.png";
 import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = () => {
-  //REDUX
+  const history = useHistory();
   const navigate = useNavigate();
+
+//FORM SELECTION
+const handleRegisterClick = () => {
+  navigate("/register?formSelection=1");
+};
+
+  //REDUX
   const dispatch = useDispatch();
 
   const credentialsRdx = useSelector(userDataCheck);
@@ -97,7 +105,7 @@ export const NavbarTop = () => {
                   <div className="p-1 me-3 loginButton">Login</div>
                   <div
                     className="p-1 registerButton"
-                    onClick={() => navigate("/register")}
+                    onClick={handleRegisterClick}
                   >
                     Registro
                   </div>

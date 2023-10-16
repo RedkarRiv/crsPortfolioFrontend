@@ -104,7 +104,7 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />{" "}
         <div className="errorDataDesign">
-          <p>{newCredentialsError.firstNameError}</p>
+          <div>{newCredentialsError.firstNameError}</div>
         </div>
         <div className="fieldNameDesign">Apellido</div>
         <InputLabel
@@ -116,7 +116,7 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />{" "}
         <div className="errorDataDesign">
-          <p>{newCredentialsError.lastNameError}</p>
+          <div>{newCredentialsError.lastNameError}</div>
         </div>
         <div className="fieldNameDesign">E-mail</div>
         <InputLabel
@@ -128,7 +128,7 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
         <div className="errorDataDesign">
-          <p>{newCredentialsError.emailError}</p>
+          <div>{newCredentialsError.emailError}</div>
         </div>
         <div className="fieldNameDesign">Password</div>
         <InputLabel
@@ -141,7 +141,7 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
         <div className="errorDataDesign">
-          <p>{newCredentialsError.passwordError}</p>
+          <div>{newCredentialsError.passwordError}</div>
         </div>
         <div className="fieldNameDesign">Repite Password</div>
 
@@ -154,7 +154,7 @@ export const RegisterForm = () => {
           onBlurFunction={(e) => InputRegisterCheck(e, newCredentials.password)}
         />
         <div className="errorDataDesign">
-          <p>{newCredentialsError.doubleCheckPasswordError }</p>
+          <div>{newCredentialsError.doubleCheckPasswordError }</div>
         </div>
         <Button
           name="Crear cuenta"

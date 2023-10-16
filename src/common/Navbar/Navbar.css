@@ -32,6 +32,7 @@
 .registerButton:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(1, 6, 77);
+  font-weight: bold;
 }
 
 .avatarAccountDesign {

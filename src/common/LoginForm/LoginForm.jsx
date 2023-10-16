@@ -85,8 +85,8 @@ export const LoginForm = () => {
             placeholder="Introduce tu password"
             onBlurFunction={(e) => InputCheck(e)}
           />
-          <div className="errorMessageDesign">
-            <p>{errorMessage}</p>
+          <div className="errorMessageDesign my-2">
+            <p className="m-0">{errorMessage}</p>
           </div>
 
           <Button name="Enviar" path="" functionButton={(e) => logMe(e)} />

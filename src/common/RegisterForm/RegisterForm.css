@@ -23,9 +23,10 @@
 }
 
 .errorMessageDesign {
-  color: rgb(255, 200, 0);
+  color: rgb(255, 51, 0);
   font-weight: bold;
   text-align: center;
+
 }
 
 .errorDataDesign {

@@ -1,7 +1,7 @@
 
 .formDesign {
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     padding: 0.8em;
     display:flex;
     flex-direction: column;
@@ -11,8 +11,10 @@
   }
     
   .fieldNameDesign {
-    color:black;
-    }
+    color: white;
+    margin-top: 0.5em;
+
+  }
   .titleDesign {
     color: rgb(55, 146, 199);
     font-weight: bold;

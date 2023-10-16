@@ -1,12 +1,14 @@
-.registerBackgroundDesign {
+.authBackgroundDesign {
   background: white;
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
 }
 
-.formContainer {
-border-right: rgba(255, 255, 255, 0.309) 0.1em solid;
+.loginClaim {
+  width: 50%;
+  background-color: rgb(19, 33, 111);
+  border-radius: 0.5em;
 }
 
 .registerClaim {
@@ -16,11 +18,11 @@ border-right: rgba(255, 255, 255, 0.309) 0.1em solid;
 }
 
 .imgContainer {
-  width: 15em;
+  width: 20em;
   height: 15em;
   background-image: url(../../img/registerImg.png);
   background-repeat: no-repeat;
-  background-size: 180%;
+  background-size: 150%;
   background-position: center;
   border-radius:50%;
 
@@ -32,7 +34,7 @@ border-right: rgba(255, 255, 255, 0.309) 0.1em solid;
 }
 
 @media (max-width: 576px) {
-  .registerClaim {
+  .registerClaim, .loginClaim {
     height:100%;
     width: 100%;
   }
