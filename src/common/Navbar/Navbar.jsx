@@ -5,18 +5,20 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import AccountAvatar from "../../img/avatarAccount.png";
 import { useNavigate } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = () => {
-  const history = useHistory();
   const navigate = useNavigate();
 
-//FORM SELECTION
-const handleRegisterClick = () => {
-  navigate("/register?formSelection=1");
-};
+  //FORM SELECTION
+  const handleRegisterClickRegister = () => {
+    navigate("/register?formSelection=0");
+  };
+
+  const handleRegisterClickLogin = () => {
+    navigate("/register?formSelection=1");
+  };
 
   //REDUX
   const dispatch = useDispatch();
@@ -101,15 +103,20 @@ const handleRegisterClick = () => {
                 </div>
               </Nav>
             ) : (
-                <Nav className="text-light w-25 d-flex justify-content-center align-items-center">
-                  <div className="p-1 me-3 loginButton">Login</div>
-                  <div
-                    className="p-1 registerButton"
-                    onClick={handleRegisterClick}
-                  >
-                    Registro
-                  </div>
-                </Nav>
+              <Nav className="text-light w-25 d-flex justify-content-center align-items-center">
+                <div
+                  className="p-1 me-3 loginButton"
+                  onClick={handleRegisterClickLogin}
+                >
+                  Login
+                </div>
+                <div
+                  className="p-1 registerButton"
+                  onClick={handleRegisterClickRegister}
+                >
+                  Registro
+                </div>
+              </Nav>
             )}
           </Navbar.Collapse>
         </Container>
@@ -117,5 +124,3 @@ const handleRegisterClick = () => {
     </div>
   );
 };
-
-

@@ -4,12 +4,21 @@ import { RegisterForm } from "../../common/RegisterForm/RegisterForm";
 import { LoginForm } from "../../common/LoginForm/LoginForm";
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "../../common/Button/Button";
+import { useLocation } from "react-router-dom";
 
 export const Register = () => {
-  const formSelection = "1"
-  const [registerForm, setRegisterForm] = useState(formSelection);
-console.log("Esto es el register")
-console.log(registerForm)
+  const location = useLocation();
+  const urlSearchParams = new URLSearchParams(location.search);
+  const formSelection = urlSearchParams.get("formSelection") || "0";
+
+  useEffect(() => {
+    setRegisterForm(formSelection);
+  }, [formSelection]);
+
+
+  const [registerForm, setRegisterForm] = useState("0");
+  console.log("Esto es el register");
+  console.log(registerForm);
   return (
     <>
       <div className="authBackgroundDesign d-flex justify-content-around align-items-start p-0 m-0 mt-md-4">
