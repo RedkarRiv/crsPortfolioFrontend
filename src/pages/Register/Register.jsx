@@ -5,8 +5,11 @@ import { LoginForm } from "../../common/LoginForm/LoginForm";
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "../../common/Button/Button";
 import { useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const Register = () => {
+  //FORM DYNAMIC RENDER
   const location = useLocation();
   const urlSearchParams = new URLSearchParams(location.search);
   const formSelection = urlSearchParams.get("formSelection") || "0";
@@ -15,6 +18,14 @@ export const Register = () => {
     setRegisterForm(formSelection);
   }, [formSelection]);
 
+  //CREDENTIALS CHECK
+  const credentialsRdx = useSelector(userDataCheck);
+
+  useEffect(() => {
+    if (credentialsRdx.credentials.token ?? formSelection === 1) {
+      setRegisterForm("0");
+    }
+  }, []);
 
   const [registerForm, setRegisterForm] = useState("0");
   console.log("Esto es el register");
@@ -35,8 +46,7 @@ export const Register = () => {
                 </p>
                 <div className="w-100 d-flex justify-content-center p-3">
                   <Button
-                            className="buttonAuthColor"
-
+                    className="buttonAuthColor"
                     name="Más información"
                     path="/"
                     functionButton={(e) => onClick(e)}

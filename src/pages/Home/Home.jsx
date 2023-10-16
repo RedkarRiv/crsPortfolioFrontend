@@ -21,7 +21,7 @@ export const Home = () => {
             <img src={logoCRS} alt="Logo Crs" className="logoHomeDesign" />
           </Row>
 
-          <Row className="d-flex justify-content-around pt-1 px-5 ">
+          <Row className="d-flex justify-content-around pt-2 px-5 ">
             <Col className="col-12 col-md-2">
               <Button
                 className="buttonHomeColor"
