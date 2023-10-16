@@ -43,7 +43,7 @@ export const Register = () => {
               </Col>
             </Row>
           ) : (
-            <Row className="loginClaim d-flex align-items-start justify-content-center p-2">
+            <Row className="loginClaim d-flex align-items-start justify-content-center p-2 mt-3 mt-md-0">
               <Col className="col-12 w-75 d-flex justify-content-center align-items-center">
                 <LoginForm />
               </Col>
