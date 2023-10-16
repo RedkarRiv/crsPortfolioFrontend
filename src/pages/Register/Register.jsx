@@ -16,10 +16,10 @@ export const Register = () => {
             </Col>
             <Col className="col-12 col-md-6 mt-2 mt-md-0 pt-md-4 d-flex flex-column align-items-center">
               <div className="imgContainer"></div>
-              <p className="text-center registerTextDesign py-3 px-2">
+              <p className="text-center registerTextDesign py-3 px-2 m-0">
                 Registrate para poder disfrutar de la experiencia completa.
               </p>
-              <div className="w-100 d-flex justify-content-center">
+              <div className="w-100 d-flex justify-content-center p-3">
               <Button
                 name="Más información"
                 path="/"
