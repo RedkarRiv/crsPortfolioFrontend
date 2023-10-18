@@ -5,6 +5,7 @@
   border: 0;
   background-color: rgb(17, 17, 19);
   overflow-x: hidden;
+  padding-top:75px;
 }
 
 .slidePhoto {
@@ -48,8 +49,6 @@
 .buttonHomeColor {
   color: white;
 }
-
-
 
 @media (max-width: 576px) {
   .slidePhoto {

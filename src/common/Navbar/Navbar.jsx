@@ -41,8 +41,8 @@ export const NavbarTop = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="navbarDesign text-white navbar-dark p-3 m-0 d-flex justify-content-center
-        "
+        className="navbarDesign text-white navbar-dark p-3 m-0 d-flex justify-content-center"
+        fixed="top"
       >
         <Container className="m-0 p-0 w-100">
           <Navbar.Brand
