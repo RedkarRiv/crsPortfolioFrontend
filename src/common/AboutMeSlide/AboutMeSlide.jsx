@@ -3,10 +3,9 @@ import "./AboutMeSlide.css";
 import { Col, Row } from "react-bootstrap";
 
 export const AboutMeSlide = () => {
-
   return (
     <>
-      <Row className="aboutMeBG m-0 mb-4 p-0 d-flex justify-content-center">
+      <Row className="aboutMeBG m-0 mb-5 p-0 d-flex justify-content-center">
         <Col className="col-12 techTitle d-flex text-center justify-content-center pt-5 px-0 m-0">
           Acerca de mí
         </Col>
@@ -60,8 +59,8 @@ export const AboutMeSlide = () => {
             </div>
           </div>{" "}
         </Col>
-        <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center m-0 p-0">
-          <a href="../..pdfs/crs_cv.pdf" download="CarlosRedondo_CV.pdf" className="fileDownload">Descargar CV</a>
+        <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center mt-5 p-0">
+          <div className="fileDownload">Descargar CV</div>
         </Col>
       </Row>
     </>

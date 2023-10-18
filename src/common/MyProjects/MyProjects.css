@@ -1,0 +1,13 @@
+.myProjectsBG {
+  width: 100vw;
+  min-height: 90vh;
+  background-color: rgb(193, 97, 97);
+}
+
+.projectImage {
+    background-color: green;
+}
+
+.projectDescription {
+    background-color: blue;
+}
