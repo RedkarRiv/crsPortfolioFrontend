@@ -72,3 +72,14 @@
 
 
 
+
+
+
+@media (min-width: 1400px) {
+  .containerhome {
+padding-right: 10%;
+padding-left: 10%;
+  }
+
+}
+
