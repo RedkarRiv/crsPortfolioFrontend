@@ -6,8 +6,8 @@ import logoCRS from "../../img/LogoCRS.png";
 export const Home = () => {
   return (
     <>
-      <div className="containerhome d-flex justify-content-center align-items-start">
-        <Container className="m-0 d-flex justify-content-center flex-column">
+      <div className="containerhome d-flex justify-content-start flex-column align-items-start">
+        {/* <Container className="m-0 d-flex justify-content-center flex-column"> */}
           <Row className="w-100 m-0 p-0">
             <Col className="slidePhoto col-6"></Col>
             <Col className="slideDescription col-6 d-flex align-items-center justify-content-center flex-column">
@@ -21,7 +21,7 @@ export const Home = () => {
             <img src={logoCRS} alt="Logo Crs" className="logoHomeDesign" />
           </Row>
 
-          <Row className="d-flex justify-content-around pt-2 px-5 ">
+          <Row className="d-flex justify-content-around pt-2 px-5 w-100">
             <Col className="col-12 col-md-2">
               <Button
                 className="buttonHomeColor"
@@ -47,7 +47,7 @@ export const Home = () => {
               />
             </Col>
           </Row>
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   );

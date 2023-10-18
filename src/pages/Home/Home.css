@@ -44,8 +44,13 @@
 }
 
 .buttonHomeColor {
-  background-color: rgb(217, 69, 0);
+  background-color: rgb(255, 89, 0);
   color: white;
+}
+
+
+.wCheck {
+  width: 100vw;
 }
 @media (max-width: 576px) {
   .slidePhoto {
