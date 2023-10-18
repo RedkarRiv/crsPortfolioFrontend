@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "./Register.css";
+import "./AuthLanding.css";
 import { RegisterForm } from "../../common/RegisterForm/RegisterForm";
 import { LoginForm } from "../../common/LoginForm/LoginForm";
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "../../common/Button/Button";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { userDataCheck, userout } from "../../pages/userSlice";
+import { userDataCheck, userout } from "../userSlice";
 import { useNavigate } from "react-router-dom";
 
-export const Register = () => {
+export const AuthLanding = () => {
   const navigate = useNavigate();
 
   //FORM DYNAMIC RENDER

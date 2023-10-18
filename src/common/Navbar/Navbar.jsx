@@ -13,11 +13,11 @@ export const NavbarTop = () => {
 
   //FORM SELECTION
   const handleRegisterClickRegister = () => {
-    navigate("/register?formSelection=0");
+    navigate("/authform?formSelection=0");
   };
 
   const handleRegisterClickLogin = () => {
-    navigate("/register?formSelection=1");
+    navigate("/authform?formSelection=1");
   };
 
   //REDUX

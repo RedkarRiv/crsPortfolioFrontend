@@ -15,7 +15,7 @@ export const LoginForm = () => {
 
   //FORM SELECTION
   const handleRegisterClickRegister = () => {
-    navigate("/register?formSelection=0");
+    navigate("/authform?formSelection=0");
   };
 
   //CHECK FIELDS
