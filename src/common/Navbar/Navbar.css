@@ -1,6 +1,7 @@
 .navbarDesign {
   background-color: rgb(1, 6, 77);
   user-select: none;
+  width: 100vw;
 }
 .logoDesign {
   cursor: pointer;

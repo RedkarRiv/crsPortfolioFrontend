@@ -9,7 +9,7 @@ export const Home = () => {
     <>
       <Container
         fluid
-        className="m-0 w-100 d-flex containerhome justify-content-center flex-column"
+        className="m-0 w-100 d-flex containerHome justify-content-center flex-column"
       >
         <Row className="w-100 m-0 p-0">
           <Col className="slidePhoto col-6 p-0"></Col>
@@ -24,7 +24,7 @@ export const Home = () => {
           <img src={logoCRS} alt="Logo Crs" className="logoHomeDesign" />
         </Row>
 
-        <Row className="buttonHomeContainer d-flex justify-content-center align-items-center w-100 p-0 mb-5 m-md-0">
+        <Row className="buttonHomeContainer d-flex justify-content-center align-items-center w-100 p-0 m-0 mb-5">
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
               className="buttonHomeColor"
