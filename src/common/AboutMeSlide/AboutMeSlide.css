@@ -1,12 +1,13 @@
 .aboutMeBG {
   background-color: rgb(157, 219, 230);
-  height: 90vh;
+  min-height: 90vh;
+  width: 100vw;
 }
 
 .techLabel {
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   width: 80%;
-  height: 60%;
+  height: 25em;
   border-radius: 0.3em;
 }
 
@@ -16,4 +17,16 @@
     font-size: 250%;
     font-weight: bold;
     height: 3em;
+}
+
+.downloadFilesContainer {
+    height: 4em;
+}
+
+.fileDownload {
+    background-color: red;
+    color: white;
+    border-radius: 0.5em;
+    height: auto;
+    padding: 0.5em;
 }
