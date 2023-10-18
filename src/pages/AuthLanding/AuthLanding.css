@@ -3,6 +3,8 @@
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  padding-top:75px;
+
 }
 
 .loginClaim {
@@ -15,6 +17,7 @@
   background-color: rgb(19, 33, 111);
   border-radius: 0.5em;
   width: 70%;
+  
 }
 
 .imgContainer {

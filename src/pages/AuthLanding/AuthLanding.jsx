@@ -35,7 +35,7 @@ export const AuthLanding = () => {
   console.log(registerForm);
   return (
     <>
-      <div className="authBackgroundDesign d-flex justify-content-around align-items-start p-0 m-0 mt-md-4">
+      <div className="authBackgroundDesign d-flex justify-content-around align-items-start m-0 mt-md-4">
         <Container className="p-0 m-0 d-flex justify-content-center align-items-center">
           {registerForm === "0" ? (
             <Row className="registerClaim d-flex align-items-start justify-content-around p-2 mt-3 mt-md-0">

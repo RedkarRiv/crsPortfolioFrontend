@@ -6,7 +6,16 @@
   background-color: rgb(17, 17, 19);
   overflow-x: hidden;
   padding-top:75px;
+  padding-left: 0em;
+  padding-right: 0em;
+  padding-bottom: 0em;
 }
+
+.buttonHomeContainer {
+  height: 8em;
+}
+
+
 
 .slidePhoto {
   background-color: white;
@@ -16,7 +25,6 @@
   background-position: 0% 40%;
   height: 60vh;
   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
-  
 }
 
 .slideDescription {
@@ -44,15 +52,19 @@
   margin-top: -7em;
   width: 15%;
   filter: invert(100%);
+  cursor: pointer;
+  user-select: none;
 }
-
+.logoHomeDesign:hover {
+transform: scale(1.1);
+}
 .buttonHomeColor {
   color: white;
 }
 
 @media (max-width: 576px) {
   .slidePhoto {
-    background-position: 50% -2%;
+    background-position: 50% 51%;
     background-size: cover;
   }
   .homeSubtitleDesign,
@@ -66,18 +78,6 @@
   .logoHomeDesign {
     margin-top: -4em;
     width: 50%;
-  }
-}
-
-
-
-
-
-
-@media (min-width: 1400px) {
-  .containerhome {
-padding-right: 10%;
-padding-left: 10%;
   }
 
 }
