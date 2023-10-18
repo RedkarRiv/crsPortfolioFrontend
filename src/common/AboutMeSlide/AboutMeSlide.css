@@ -1,4 +1,19 @@
 .aboutMeBG {
-    background-color: green;
-    height: 30em;
+  background-color: rgb(157, 219, 230);
+  height: 90vh;
+}
+
+.techLabel {
+  background-color: red;
+  width: 80%;
+  height: 60%;
+  border-radius: 0.3em;
+}
+
+.techTitle {
+    background-color: rgb(157, 219, 230);
+    color: black;
+    font-size: 250%;
+    font-weight: bold;
+    height: 3em;
 }

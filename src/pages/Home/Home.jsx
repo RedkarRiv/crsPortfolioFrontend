@@ -29,14 +29,14 @@ export const Home = () => {
             <Button
               className="buttonHomeColor"
               path=""
-              name="Proyectos"
+              name="Acerca de mí"
               functionButton={(e) => logMe(e)}
             />
           </Col>
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
               className="buttonHomeColor"
-              name="Acerca de mí"
+              name="Proyectos"
               path=""
               functionButton={(e) => logMe(e)}
             />

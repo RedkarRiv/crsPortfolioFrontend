@@ -19,7 +19,8 @@
 .ButtonDesign:hover {
   border-radius: 0.5em;
   background-color: #4a7f05;
-  transition: 0.1s;
+  transition: 0.25s linear;
+
 }
 
 .ButtonDesign:active {

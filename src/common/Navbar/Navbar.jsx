@@ -59,7 +59,7 @@ export const NavbarTop = () => {
                   className="navbarOptionDesign"
                   onClick={() => navigate("/")}
                 >
-                  Home
+                  Inicio
                 </div>
                 <div
                   className="navbarOptionDesign"
