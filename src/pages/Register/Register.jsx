@@ -7,8 +7,11 @@ import { Button } from "../../common/Button/Button";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
+  const navigate = useNavigate();
+
   //FORM DYNAMIC RENDER
   const location = useLocation();
   const urlSearchParams = new URLSearchParams(location.search);
@@ -22,8 +25,8 @@ export const Register = () => {
   const credentialsRdx = useSelector(userDataCheck);
 
   useEffect(() => {
-    if (credentialsRdx.credentials.token ?? formSelection === 1) {
-      setRegisterForm("0");
+    if (credentialsRdx.credentials.token) {
+      navigate("/home");
     }
   }, []);
 
