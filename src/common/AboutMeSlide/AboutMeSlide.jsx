@@ -10,16 +10,50 @@ export const AboutMeSlide = () => {
           Acerca de mí
         </Col>
         <Col className="col-12 col-md-4 d-flex justify-content-center align-items-start pt-4">
-          <div className="techLabel"></div>
+          <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
+            <div className="techContentTitle">FRONTEND</div>
+            <div className="techContentDescription py-4">
+              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
+              al sircoo
+            </div>
+            <div className="technologyItems d-flex flex-column align-items-center">
+              <div className="techItem my-1">JAVASCRIPT</div>
+              <div className="techItem my-1">REACT+REDUX</div>
+              <div className="techItem my-1">BOOTSTRAP</div>
+              <div className="techItem my-1">HTML + CSS</div>
+            </div>
+          </div>
         </Col>
         <Col className="col-12 col-md-4 d-flex justify-content-center align-items-start pt-4">
-          <div className="techLabel"></div>
-        </Col>{" "}
+        <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
+            <div className="techContentTitle">BACKEND</div>
+            <div className="techContentDescription py-4">
+              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
+              al sircoo
+            </div>
+            <div className="technologyItems d-flex flex-column align-items-center">
+              <div className="techItem my-1">JAVASCRIPT</div>
+              <div className="techItem my-1">NODE.JS</div>
+              <div className="techItem my-1">EXPRESS</div>
+              <div className="techItem my-1">SEQUELIZE</div>
+              <div className="techItem my-1">PHP</div>
+              <div className="techItem my-1">LARAVEL</div>
+            </div>
+          </div>        </Col>{" "}
         <Col className="col-12 col-md-4 d-flex justify-content-center align-items-start pt-4">
-          <div className="techLabel"></div>
-        </Col>
-        <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center">
-          <div className="fileDownload">Curriculum Vitae</div>
+        <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
+            <div className="techContentTitle">BBDD</div>
+            <div className="techContentDescription py-4">
+              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
+              al sircoo
+            </div>
+            <div className="technologyItems d-flex flex-column align-items-center">
+              <div className="techItem my-1">MYSQL</div>
+              <div className="techItem my-1">MONGO</div>
+            </div>
+          </div>        </Col>
+        <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center mt-5">
+          <div className="fileDownload">Descargar CV</div>
         </Col>
       </Row>
     </>

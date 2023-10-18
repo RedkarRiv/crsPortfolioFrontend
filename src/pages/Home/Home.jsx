@@ -51,6 +51,8 @@ export const Home = () => {
           </Col>
         </Row>
         <AboutMeSlide />
+      
+
       </Container>
     </>
   );

@@ -1,19 +1,57 @@
 .aboutMeBG {
-  background-color: rgb(157, 219, 230);
   min-height: 90vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .techLabel {
   background-color: rgb(255, 255, 255);
   width: 80%;
-  height: 25em;
+  min-height: 25em;
   border-radius: 0.3em;
 }
+.techContentTitle {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.techContentDescription {
+  width: 100%;
+  min-height: 20%;
+  text-align: center;
+}
+
+.technologyItems {
+  min-height: 60%;
+  width: 100%;
+}
+
+.techItem {
+  border-radius: 0.2em;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .techTitle {
-    background-color: rgb(157, 219, 230);
-    color: black;
+    color: white;
     font-size: 250%;
     font-weight: bold;
     height: 3em;
