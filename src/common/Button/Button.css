@@ -15,12 +15,11 @@
   font-weight: bold;
   border: solid 0.05em white;
   user-select: none;
-  margin-top: 1em;
 }
 
 .ButtonDesign:hover {
   border-radius: 0.5em;
-  background-color: #558911;
+  background-color: #4a7f05;
   transition: 0.1s;
 }
 

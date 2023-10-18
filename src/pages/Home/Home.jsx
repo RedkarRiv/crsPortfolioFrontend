@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Button } from "../../common/Button/Button";
 import logoCRS from "../../img/LogoCRS.png";
 export const Home = () => {
@@ -11,7 +11,7 @@ export const Home = () => {
           <Row className="w-100 m-0 p-0">
             <Col className="slidePhoto col-6"></Col>
             <Col className="slideDescription col-6 d-flex align-items-center justify-content-center flex-column">
-              <div className="d-flex align-items-start flex-column h-50">
+              <div className="d-flex align-items-center flex-column h-50">
                 <div className="homeTitleDesign"> Carlos Redondo </div>
                 <div className="homeSubtitleDesign">Junior Developer </div>
               </div>

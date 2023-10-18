@@ -7,9 +7,16 @@ import { Button } from "../../common/Button/Button";
 import "./LoginForm.css";
 import { login } from "../../pages/userSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  //FORM SELECTION
+  const handleRegisterClickRegister = () => {
+    navigate("/register?formSelection=0");
+  };
 
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
@@ -76,7 +83,6 @@ export const LoginForm = () => {
           functionHandler={(e) => InputHandler(e)}
           onBlurFunction={(e) => InputCheck(e)}
         />
-
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
@@ -89,7 +95,16 @@ export const LoginForm = () => {
         <div className="errorMessageDesign my-2">
           <p className="m-0">{errorMessage}</p>
         </div>
-
+        <div className="authQuestion my-3 w-100 d-flex justify-content-center">
+          <div className="authQuestionText me-2">¿No tienes cuenta?</div>
+          <div
+            className="authQuestionLink"
+            onClick={handleRegisterClickRegister}
+          >
+            {" "}
+            Crear cuenta.
+          </div>
+        </div>
         <Button
           className="buttonAuthColor"
           name="Enviar"

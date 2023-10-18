@@ -14,6 +14,11 @@ export const RegisterForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  //FORM SELECTION
+  const handleRegisterClickLogin = () => {
+    navigate("/register?formSelection=1");
+  };
+
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
   const [newCredentialsError, setNewCredentialsError] = useState({
@@ -152,6 +157,13 @@ export const RegisterForm = () => {
         />
         <div className="errorDataDesign">
           <div>{newCredentialsError.doubleCheckPasswordError}</div>
+        </div>
+        <div className="authQuestion my-3 w-100 d-flex justify-content-center">
+          <div className="authQuestionText me-2">¿Ya tienes cuenta?</div>
+          <div className="authQuestionLink" onClick={handleRegisterClickLogin}>
+            {" "}
+            Iniciar sesión.
+          </div>
         </div>
         <Button
           className="buttonAuthColor"

@@ -38,4 +38,17 @@
 
 .buttonAuthColor{
   background-color: #0d479f;
-  color: white;}
+  color: white;
+}
+
+  .authQuestion {
+    font-size: 80%;
+
+    color: white;
+    }
+
+    .authQuestionLink {
+      color:#ffae00;
+      cursor: pointer;
+      font-weight: bold;
+    }
