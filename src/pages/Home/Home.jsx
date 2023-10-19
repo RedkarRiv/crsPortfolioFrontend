@@ -6,7 +6,18 @@ import logoCRS from "../../img/LogoCRS.png";
 import { AboutMeSlide } from "../../common/AboutMeSlide/AboutMeSlide";
 import { MyProjects } from "../../common/MyProjects/MyProjects";
 import { ContactForm } from "../../common/ContactForm/ContactForm";
+
 export const Home = () => {
+  const scrollToSection = (targetId) => {
+
+    const element = document.getElementById(targetId);
+    if (targetId!="CRSProjects") {
+      element.scrollIntoView({ behavior: "smooth", block: "end" });
+    } else {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    }
+  };
   return (
     <>
       <Container
@@ -32,7 +43,7 @@ export const Home = () => {
               className="buttonHomeColor"
               path=""
               name="Acerca de mí"
-              functionButton={(e) => logMe(e)}
+              functionButton={(e) => scrollToSection("aboutMe")}
             />
           </Col>
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
@@ -40,7 +51,7 @@ export const Home = () => {
               className="buttonHomeColor"
               name="Proyectos"
               path=""
-              functionButton={(e) => logMe(e)}
+              functionButton={(e) => scrollToSection("CRSProjects")}
             />
           </Col>
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
@@ -48,13 +59,14 @@ export const Home = () => {
               className="buttonHomeColor"
               name="Contacto"
               path=""
-              functionButton={(e) => logMe(e)}
+              functionButton={(e) => scrollToSection("contactMe")}
             />
           </Col>
         </Row>
-        <AboutMeSlide />
+        <AboutMeSlide id="aboutMe" />
+        <div id="CRSProjects"  className="my-5"></div>
         <MyProjects />
-        <ContactForm />
+        <ContactForm id="contactMe" />
       </Container>
     </>
   );

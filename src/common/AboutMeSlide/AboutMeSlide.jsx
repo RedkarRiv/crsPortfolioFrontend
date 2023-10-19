@@ -2,10 +2,10 @@ import React from "react";
 import "./AboutMeSlide.css";
 import { Col, Row } from "react-bootstrap";
 
-export const AboutMeSlide = () => {
+export const AboutMeSlide = ({id}) => {
   return (
     <>
-      <Row className="aboutMeBG m-0 mb-5 p-0 d-flex justify-content-center">
+      <Row id={id}  className="aboutMeBG m-0 my-5 p-0 d-flex justify-content-center">
         <Col className="col-12 techTitle d-flex text-center justify-content-center pt-5 px-0 m-0">
           Acerca de mí
         </Col>

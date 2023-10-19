@@ -3,15 +3,16 @@ import "./ContactForm.css";
 import { InputLabel } from "../../common/InputLabel/InputLabel";
 import { Button } from "../../common/Button/Button";
 
-export const ContactForm = () => {
+export const ContactForm = ({id}) => {
   return (
     <>
-      <div className="contactSlideBG d-flex justify-content-center align-items-center py-5">
+      <div id={id} className="contactSlideBG d-flex justify-content-center align-items-center py-5">
         <form className="contactFormDesign d-flex flex-column justify-content-center align-items-center">
           <div className="titleDesign">CONTACTO</div>
           <div className="fieldNameDesign">Nombre</div>
           <InputLabel
             type="text"
+            maxLength={20}
             classDesign=""
             name="firstName"
             functionHandler={(e) => InputHandlerRegister(e)}
@@ -23,6 +24,7 @@ export const ContactForm = () => {
             type="text"
             placeholder="Introduce tu email"
             name="email"
+            maxLength={20}
             classDesign=""
             functionHandler={(e) => InputHandlerRegister(e)}
             onBlurFunction={(e) => InputRegisterCheck(e)}

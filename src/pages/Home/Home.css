@@ -53,6 +53,7 @@
   filter: invert(100%);
   cursor: pointer;
   user-select: none;
+  
 }
 .logoHomeDesign:hover {
   transform: scale(1.1);
