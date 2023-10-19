@@ -18,11 +18,11 @@ export const MyProjects = () => {
         </Col>
         <Col className="col-12 m-0 p-0 d-flex justify-content-start align-items-center flex-column">
           <Row className="d-flex my-2 projectSlide">
-            <Col className="col-12 col-md-6 projectImage m-0 p-1 d-flex justify-content-center align-items-center">
+            <Col className="col-12 col-md-6 projectImage m-0 p-0 d-flex justify-content-center align-items-center">
               <img
                 src={WWSimg}
-                alt="Dental Clinic Frontend"
-                className="imgProject p-1"
+                alt="WWS helpdesk"
+                className="imgProject h-100"
               />
             </Col>
             <Col className="col-12 col-md-6 projectDescription m-0 py-3 d-flex justify-content-between align-items-center flex-column">
@@ -139,7 +139,7 @@ export const MyProjects = () => {
               <img
                 src={Devstaurante}
                 alt="Dental Clinic Frontend"
-                className="imgProject p-1"
+                className="imgProject h-100"
               />
             </Col>
             <Col className="col-12 col-md-6 projectDescription m-0 py-3 d-flex justify-content-between align-items-center flex-column">
@@ -177,9 +177,9 @@ export const MyProjects = () => {
               <div className="my-2">
                 {" "}
                 Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar
-                llevame al sircoo. Tiene musho  diodenoo. Pecador ahorarr
-                a wan mamaar llevame al sircoo. Tiene musho peligro diodenoo.
-                Pecador ahorarr a wan mamaar llevame al sircoo
+                llevame al sircoo. Tiene musho diodenoo. Pecador ahorarr a wan
+                mamaar llevame al sircoo. Tiene musho peligro diodenoo. Pecador
+                ahorarr a wan mamaar llevame al sircoo
               </div>
               <Button
                 className="buttonProject"
