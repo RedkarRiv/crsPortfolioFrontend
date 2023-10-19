@@ -48,7 +48,8 @@
 
 .logoHomeDesign {
   margin-top: -7em;
-  width: 15%;
+  width: 14em;
+  height: auto;
   filter: invert(100%);
   cursor: pointer;
   user-select: none;

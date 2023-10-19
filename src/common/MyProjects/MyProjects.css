@@ -1,25 +1,47 @@
 .myProjectsBG {
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: rgb(17, 17, 19);
 }
 .projectSlide {
-  height: 15em;
+  min-height: 17em;
   width: 55em;
 }
 
 .projectImage {
-  background-color: green;
+  background-color: rgb(1, 0, 0);
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
+  height: 17em;
+  overflow: hidden;
 }
-
+.projectTitle {
+  font-weight: bold;
+  font-size: 150%;
+}
 .projectDescription {
-  background-color: blue;
+  background-color: rgb(49, 49, 91);
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
+  min-height: 17em;
+  color: white;
+  text-align: center;
 }
 
+.imgProject {
+  width: 105%;
+  height: auto;
+}
+
+.buttonProject {
+  background-color: green;
+  padding-bottom: 0.1em;
+}
+
+.imgBackFix {
+  width: 108%;
+  margin-right: -0.5em;
+}
 @media (max-width: 576px) {
   .projectSlide {
     width: 80vw;
@@ -28,10 +50,13 @@
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     border-bottom-left-radius: 0em;
+    height: 11em;
   }
   .projectDescription {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-top-right-radius: 0em;
+    height: 10em;
+    font-size: 90%;
   }
 }
