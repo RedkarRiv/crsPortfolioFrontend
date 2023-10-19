@@ -13,7 +13,7 @@
   width: 80%;
   height: auto;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   font-size: 150%;
   font-weight: bold;
@@ -35,25 +35,23 @@
   font-weight: bold;
 }
 
-
-
 .techTitle {
-    color: white;
-    font-size: 250%;
-    font-weight: bold;
-    height: 3em;
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  height: 3em;
 }
 
 .downloadFilesContainer {
-    height: 4em;
+  height: 4em;
 }
 
 .fileDownload {
-    background-color: red;
-    color: white;
-    border-radius: 0.5em;
-    height: auto;
-    padding: 0.5em;
-    user-select: none;
-    cursor: pointer;
+  background-color: red;
+  color: white;
+  border-radius: 0.5em;
+  height: auto;
+  padding: 0.5em;
+  user-select: none;
+  cursor: pointer;
 }

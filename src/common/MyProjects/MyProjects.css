@@ -1,5 +1,5 @@
 .myProjectsBG {
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   background-color: rgb(17, 17, 19);
 }
@@ -15,28 +15,23 @@
 }
 
 .projectDescription {
-    background-color: blue;
-    border-top-right-radius: 1em;
+  background-color: blue;
+  border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
-
 @media (max-width: 576px) {
-    .projectSlide {
-        width: 80vw;
-    }
-    .projectImage {
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-        border-bottom-left-radius: 0em;
-
-      }
-      .projectDescription {
-        border-bottom-left-radius: 1em;
-      border-bottom-right-radius: 1em;
-      border-top-right-radius: 0em;
-
-    }
-    
-
+  .projectSlide {
+    width: 80vw;
   }
+  .projectImage {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0em;
+  }
+  .projectDescription {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 0em;
+  }
+}

@@ -5,7 +5,7 @@ import { Col, Row } from "react-bootstrap";
 export const MyProjects = () => {
   return (
     <>
-      <Row className="myProjectsBG d-flex m-0 px-3 py-5">
+      <Row className="myProjectsBG d-flex m-0 px-3 py-5 justify-content-center">
         <Col className="col-12 techTitle d-flex text-center justify-content-center p-0 px-0 m-0">
           Mis proyectos{" "}
         </Col>
