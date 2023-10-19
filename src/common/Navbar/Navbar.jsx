@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
 
-export const NavbarTop = () => {
+export const NavbarTop = ({ scrollToTop }) => {
   const navigate = useNavigate();
 
   //FORM SELECTION
@@ -46,7 +46,10 @@ export const NavbarTop = () => {
       >
         <Container className="m-0 p-0 w-100">
           <Navbar.Brand
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              scrollToTop();
+            }}
             className="ps-md-5 logoDesign"
           >
             ❉ Carlos Redondo ❉
