@@ -60,7 +60,7 @@ export const AboutMeSlide = () => {
           </div>{" "}
         </Col>
         <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center mt-5 p-0">
-          <div className="fileDownload">Descargar CV</div>
+          <div className="fileDownload px-3">Descargar CV</div>
         </Col>
       </Row>
     </>
