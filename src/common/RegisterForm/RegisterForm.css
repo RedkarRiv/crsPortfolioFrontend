@@ -12,7 +12,7 @@
 }
 
 .titleDesign {
-  color: rgb(55, 146, 199);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@
     }
 
     .authQuestionLink {
-      color:#ffae00;
+      color:#00ea04;
       cursor: pointer;
       font-weight: bold;
     }
