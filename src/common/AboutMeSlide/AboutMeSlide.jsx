@@ -6,7 +6,7 @@ export const AboutMeSlide = ({id}) => {
   return (
     <>
       <Row id={id}  className="aboutMeBG m-0 my-5 p-0 d-flex justify-content-center">
-        <Col className="col-12 techTitle d-flex text-center justify-content-center pt-5 px-0 m-0">
+        <Col className="col-12 techTitle d-flex text-center justify-content-center align-items-end pt-5 px-0 m-0">
           Acerca de mí
         </Col>
         <Col className="col-12 col-md-4 d-flex justify-content-center align-items-start pt-4 m-0 p-0">

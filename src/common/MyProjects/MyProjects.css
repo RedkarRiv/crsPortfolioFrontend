@@ -3,15 +3,15 @@
   min-height: 100vh;
 }
 .projectSlide {
-  min-height: 17em;
-  width: 55em;
+  min-height: 20em;
+  width: 65em;
 }
 
 .projectImage {
   background-color: rgb(1, 0, 0);
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  height: 17em;
+  height: 20em;
   overflow: hidden;
 }
 .projectTitle {
