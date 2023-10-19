@@ -173,11 +173,11 @@ export const MyProjects = () => {
               />
             </Col>
             <Col className="col-12 col-md-6 projectDescription m-0 py-3 d-flex justify-content-between align-items-center flex-column">
-              <div className="projectTitle">TITULO</div>
+              <div className="projectTitle">GAME BOY COLOR</div>
               <div className="my-2">
                 {" "}
                 Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar
-                llevame al sircoo. Tiene musho peligro diodenoo. Pecador ahorarr
+                llevame al sircoo. Tiene musho  diodenoo. Pecador ahorarr
                 a wan mamaar llevame al sircoo. Tiene musho peligro diodenoo.
                 Pecador ahorarr a wan mamaar llevame al sircoo
               </div>
