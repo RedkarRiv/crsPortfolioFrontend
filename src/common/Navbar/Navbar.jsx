@@ -60,7 +60,7 @@ export const NavbarTop = ({ scrollToTop }) => {
               <Nav className="w-75 d-flex justify-content-around align-items-center">
                 <div
                   className="navbarOptionDesign"
-                  onClick={() => navigate("/")}
+                  onClick={() => scrollToTop()}
                 >
                   Inicio
                 </div>

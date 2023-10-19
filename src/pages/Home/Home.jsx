@@ -10,9 +10,7 @@ import { ContactForm } from "../../common/ContactForm/ContactForm";
 export const Home = () => {
   const scrollToSection = (targetId) => {
     const element = document.getElementById(targetId);
-    if (targetId != "CRSProjects") {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
+    if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
@@ -61,8 +59,9 @@ export const Home = () => {
             />
           </Col>
         </Row>
-        <AboutMeSlide id="aboutMe" />
-        <div id="CRSProjects" className="my-5"></div>
+        <div id="aboutMe" className="my-3"></div>
+        <AboutMeSlide />
+        <div id="CRSProjects" className="my-3"></div>
         <MyProjects />
         <ContactForm id="contactMe" />
       </Container>

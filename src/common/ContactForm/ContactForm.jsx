@@ -7,7 +7,7 @@ export const ContactForm = ({id}) => {
   return (
     <>
       <div id={id} className="contactSlideBG d-flex justify-content-center align-items-center py-5">
-        <form className="contactFormDesign d-flex flex-column justify-content-center align-items-center">
+        <form className="contactFormDesign p-4 d-flex flex-column justify-content-center align-items-center">
           <div className="titleDesign">CONTACTO</div>
           <div className="fieldNameDesign">Nombre</div>
           <InputLabel
