@@ -32,7 +32,6 @@ export const Home = () => {
         <Row className="w-100 d-flex justify-content-center m-0 p-0">
           <img src={logoCRS} alt="Logo Crs" className="logoHomeDesign" />
         </Row>
-
         <Row className="buttonHomeContainer d-flex justify-content-center align-items-center w-100 p-0 m-0 mb-5">
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
@@ -59,9 +58,9 @@ export const Home = () => {
             />
           </Col>
         </Row>
-        <div id="aboutMe" className="my-3"></div>
+        <div id="aboutMe" className="py-3"></div>
         <AboutMeSlide />
-        <div id="CRSProjects" className="my-3"></div>
+        <div id="CRSProjects" className="py-3"></div>
         <MyProjects />
         <ContactForm id="contactMe" />
       </Container>

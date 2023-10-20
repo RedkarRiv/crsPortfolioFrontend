@@ -1,0 +1,15 @@
+.shopBG {
+  background-color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 75px;
+  padding-right: 0em;
+  padding-left: 0em;
+  padding-bottom: 0em;
+  width: 100vw;
+}
+
+.shopTitle {
+  font-size: 200%;
+  font-weight: bold;
+}

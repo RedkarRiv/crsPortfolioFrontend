@@ -11,6 +11,10 @@
   padding-bottom: 0em;
 }
 
+#aboutme, #CRSProjects {
+  background-color: #1b2b51;
+}
+
 .buttonHomeContainer {
   height: 8em;
 }
