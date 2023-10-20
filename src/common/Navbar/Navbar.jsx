@@ -10,7 +10,6 @@ import { userDataCheck, userout } from "../../pages/userSlice";
 
 export const NavbarTop = ({ scrollToTop }) => {
   const navigate = useNavigate();
-
   //FORM SELECTION
   const handleRegisterClickRegister = () => {
     navigate("/authform?formSelection=0");

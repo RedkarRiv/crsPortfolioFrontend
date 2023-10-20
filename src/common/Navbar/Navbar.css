@@ -6,9 +6,10 @@
 .logoDesign {
   cursor: pointer;
 }
-
-.logoDesign:hover {
-  transform: scale(1.2);
+@media (min-width: 576px) {
+  .logoDesign:hover {
+    transform: scale(1.2);
+  }
 }
 
 .navbarOptionDesign {
