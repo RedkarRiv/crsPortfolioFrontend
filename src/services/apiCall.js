@@ -10,3 +10,10 @@ export const loginMe = async (credentials) => {
     return await axios.post(`${root}auth/register`, newCredentials);
   };
   
+  export const getProfile = async (credentialCheck) => {
+    return await axios.get(`${root}user/getProfile`, {
+      headers: {
+        authorization: "Bearer " + credentialCheck,
+      },
+    });
+  };
