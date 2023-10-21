@@ -14,6 +14,7 @@ export const ProfilePanel = () => {
   const navigate = useNavigate();
   const credentialsRdx = useSelector(userDataCheck);
   const credentialCheck = credentialsRdx?.credentials?.token;
+  const roleCheck = credentialsRdx?.credentials?.user?.roleId;
 
   //EDIT PROFILE DATA
   //FIRSTNAME
@@ -90,6 +91,10 @@ export const ProfilePanel = () => {
             Bienvenido a tu perfil
           </Col>
         </Row>
+
+
+
+
         <Row className="w-100 h-auto d-flex px-3 m-0 justify-content-center">
           <Col className="slideProfile p-3 col-8">
             <Nav variant="tabs" defaultActiveKey="/home">
@@ -100,7 +105,7 @@ export const ProfilePanel = () => {
                   }`}
                   onClick={() => handleNavItemClick("Mi perfil")}
                 >
-                  Mi perfil
+                  Perfil
                 </div>{" "}
               </Nav.Item>
               <Nav.Item>
@@ -110,9 +115,21 @@ export const ProfilePanel = () => {
                   }`}
                   onClick={() => handleNavItemClick("Mis pedidos")}
                 >
-                  Mis pedidos
+                  Pedidos
                 </div>{" "}
               </Nav.Item>
+              {roleCheck == 2 ? (
+                <Nav.Item>
+                  <div
+                    className={`navLabel p-2 mx-2 ${
+                      selectedNavItem === "Panel Admin" ? "navItemActive" : ""
+                    }`}
+                    onClick={() => handleNavItemClick("Panel Admin")}
+                  >
+                    Admin
+                  </div>{" "}
+                </Nav.Item>
+              ) : null}
             </Nav>
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
               {selectedNavItem === "Mi perfil" ? (
@@ -195,7 +212,7 @@ export const ProfilePanel = () => {
                     <div className="updateIcon"></div>
                     <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
                       <div className="profileDataTitle me-2">Estado:</div>{" "}
-                      Activa
+                      {userData.userStatus ? "Activa" : "Inactiva"}
                     </div>
                   </div>
                   <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
@@ -231,15 +248,23 @@ export const ProfilePanel = () => {
                       </div>
                     </>
                   )}
-                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column">
+                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column flex-xxl-row">
                     <Button
-                      className="buttonAuthColor"
+                      className=""
                       name="Cambiar contraseña"
                       path=""
                       functionButton={handlePasswordChangeClick}
                     />
+                    {roleCheck !== 2 ? (
+                      <Button
+                        className="buttonAuthColor2"
+                        name="Desactivar"
+                        path=""
+                        functionButton={handlePasswordChangeClick}
+                      />
+                    ) : null}
                     <Button
-                      className="buttonAuthColor"
+                      className=""
                       name="Guardar cambios"
                       path=""
                       functionButton={(e) => registerMeHandler(e)}
@@ -248,9 +273,13 @@ export const ProfilePanel = () => {
                 </Col>
               ) : null}
               {selectedNavItem === "Mis pedidos" ? <Col>Pedidosss</Col> : null}
+              {selectedNavItem === "Panel Admin" ? <Col>Admin panel</Col> : null}
+
             </Row>
           </Col>
         </Row>
+
+        
       </Container>
     </>
   );

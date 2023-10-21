@@ -9,6 +9,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import { Provider } from "react-redux";
 import  { NavbarTop } from "./common/Navbar/Navbar.jsx";
+import Footer from "./pages/Footer/Footer.jsx";
 
 const persistor = persistStore(store);
 const scrollToTop = () => {
@@ -25,6 +26,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <BrowserRouter>
           <NavbarTop scrollToTop={scrollToTop} />
           <App />
+          <Footer/>
+
         </BrowserRouter>
       </PersistGate>
     </Provider>
