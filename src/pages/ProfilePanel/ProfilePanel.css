@@ -18,18 +18,10 @@
   min-height: auto;
   width: 50%;
   border-radius: 1em;
-  background-color: rgb(77, 130, 112);
+  background-color: rgb(55, 55, 74);
+  border: solid 0.1em black;
 }
 
-.profileNavbar {
-  background-color: rgb(85, 81, 76);
-  color: black;
-}
-.profileNavbarElement {
-  background-color: rgb(151, 168, 162);
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-}
 .navLabel {
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
@@ -45,19 +37,56 @@
   font-weight: bold;
 }
 
+.profileDataDesign {
+  border-bottom: grey 0.01em solid;
+  font-size: 120%;
+}
+
+.profileDataInfo {
+  font-style: italic;
+  font-size: 90%;
+}
+.profileDataTitle {
+  font-weight: bold;
+}
+
 .myProfileBG {
-  background-color: rgb(50, 47, 47);
+  background-color: rgb(55, 55, 74);
   border-radius: 0.3em;
-min-height: 20em;
+  min-height: 20em;
+  font-size: 110%;
 }
 
 .buttonsContainer {
-    height: 6em;
+  height: 6em;
 }
+
+.updateIcon {
+  font-size: 130%;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+
+.updateIcon:hover {
+  transform: scale(1.3);
+}
+.profileInputDesign  {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.3em;
+    padding: 0.3em;
+    text-align: center;
+    }
 
 @media (max-width: 576px) {
   .slideProfile {
     width: 100%;
   }
+  .myProfileBG {
+    font-size: 80%;
+  }
+  .profilePanelTitle {
+    font-size: 140%;
+  }
 }
-
