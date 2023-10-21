@@ -6,11 +6,27 @@ import { getProfile } from "../../services/apiCall";
 import { useSelector } from "react-redux";
 import { userDataCheck } from "../../pages/userSlice";
 import { Button } from "../../common/Button/Button";
+import moment from "moment";
+import Nav from "react-bootstrap/Nav";
+import { useNavigate } from "react-router-dom";
 
 export const ProfilePanel = () => {
+  const navigate = useNavigate();
   const credentialsRdx = useSelector(userDataCheck);
   const credentialCheck = credentialsRdx?.credentials?.token;
+  //NEW PASSWORD DISPLAY
+  const [changePasswordClicked, setChangePasswordClicked] = useState(false);
 
+  const handlePasswordChangeClick = () => {
+    setChangePasswordClicked(!changePasswordClicked); 
+  };
+  
+  //PROFILE NAVBAR SELECTION
+  const [selectedNavItem, setSelectedNavItem] = useState("Mi perfil");
+
+  const handleNavItemClick = (itemName) => {
+    setSelectedNavItem(itemName);
+  };
   //NO CREDENTIALS BLOCK
   const credentialsActive = () => {
     if (!credentialsRdx) {
@@ -43,6 +59,9 @@ export const ProfilePanel = () => {
     getMyProfile();
   }, [credentialsRdx]);
 
+  //DATE FORMAT
+  const formatedDated = moment(userData.createdAt).format("DD/MM/YYYY HH:mm");
+
   return (
     <>
       <Container
@@ -54,79 +73,97 @@ export const ProfilePanel = () => {
             Bienvenido a tu perfil
           </Col>
         </Row>
-        <Row className="w-100 d-flex px-5 m-0 justify-content-around">
-          <Col className="slideProfile col-8">
-            <Row className="w-100 h-100 d-flex p-0 m-0 justify-content-center">
-              <Col className="col-6 pt-3">
-                <div className="h-100 d-flex justify-content-center align-items-center flex-column">
-                  <div className="avatarImg"></div>
-                  <div className="avatarChoose py-1 d-flex justify-content-center align-items-center">
-                    Cambiar avatar{" "}
-                  </div>
-                  <div className="nameProfile d-flex justify-content-center align-items-center">
-                    {userData.firstName +" "+userData.lastName}
-                  </div>
-                  <div className="d-flex justify-content-center align-items-center">
-                    {"Usuario desde: "} + {userData.createdAt}
-                  </div>
+        <Row className="w-100 h-auto d-flex px-3 m-0 justify-content-center">
+          <Col className="slideProfile p-3 col-8">
+            <Nav variant="tabs" defaultActiveKey="/home">
+              <Nav.Item>
+                <div
+                  className={`navLabel p-2 mx-2 ${
+                    selectedNavItem === "Mi perfil" ? "navItemActive" : ""
+                  }`}
+                  onClick={() => handleNavItemClick("Mi perfil")}
+                >
+                  Mi perfil
+                </div>{" "}
+              </Nav.Item>
+              <Nav.Item>
+                <div
+                  className={`navLabel p-2 mx-2 ${
+                    selectedNavItem === "Mis pedidos" ? "navItemActive" : ""
+                  }`}
+                  onClick={() => handleNavItemClick("Mis pedidos")}
+                >
+                  Mis pedidos
+                </div>{" "}
+              </Nav.Item>
+            </Nav>
+            <Row className="myProfileBG w-100 d-flex justify-content-center align-items-start p-1 m-0">
+              <Col className="d-flex col-8 h-100 justify-content-center m-0 p-0 flex-column">
+                <div className="text-light w-100 d-flex justify-content-center my-2">
+                  Cuenta: {userData.email}
                 </div>
-              </Col>
-              <Col className="col-6 d-flex align-items-center justify-content-center flex-column">
-                <div className="h-75 w-100 d-flex justify-content-around align-items-center flex-column">
-                  <div className="inputBox d-flex w-100 justify-content-center align-items-center">
-                    <div className="updateIcon px-2">✎</div>
-
-                    <InputLabel
-                      type="text"
-                      classDesign="me-3"
-                      name="firstName"
-                      functionHandler={(e) => InputHandlerRegister(e)}
-                      placeholder={"Nombre: " + userData.firstName}
-                      onBlurFunction={(e) => InputRegisterCheck(e)}
-                    />
-                  </div>
-                  <div className="inputBox d-flex w-100 justify-content-center align-items-center">
-                    <div className="updateIcon px-2">✎</div>
-
-                    <InputLabel
-                      type="text"
-                      classDesign="me-3"
-                      name="lastName"
-                      functionHandler={(e) => InputHandlerRegister(e)}
-                      placeholder={"Apellido: " + userData.lastName}
-                      onBlurFunction={(e) => InputRegisterCheck(e)}
-                    />
-                  </div>{" "}
-                  <div className="inputBox d-flex w-100 justify-content-center align-items-center">
-                    <div className="updateIcon px-2">✎</div>
-
-                    <InputLabel
-                      type="password"
-                      classDesign="me-3"
-                      name="password"
-                      functionHandler={(e) => InputHandlerRegister(e)}
-                      placeholder={"Password: ********* "}
-                      onBlurFunction={(e) => InputRegisterCheck(e)}
-                    />
-                  </div>{" "}
-                  <div className="inputBox d-flex w-100 justify-content-center align-items-center">
-                    <div className="iconTransp px-2">✎</div>
-                    <InputLabel
-                      type="password"
-                      classDesign="me-3"
-                      name="password"
-                      functionHandler={(e) => InputHandlerRegister(e)}
-                      placeholder="Repita Password"
-                      onBlurFunction={(e) => InputRegisterCheck(e)}
-                    />
-                  </div>
+                <div className="inputBox d-flex my-2 w-100 justify-content-center align-items-center">
+                  <div className="updateIcon px-2">✎</div>
+                  <InputLabel
+                    type="text"
+                    classDesign="me-3"
+                    name="firstName"
+                    functionHandler={(e) => InputHandlerRegister(e)}
+                    placeholder={"Nombre: " + userData.firstName}
+                    onBlurFunction={(e) => InputRegisterCheck(e)}
+                  />
                 </div>
-                <Button
-                  className="buttonAuthColor"
-                  name="Actualizar"
-                  path=""
-                  functionButton={(e) => registerMeHandler(e)}
-                />{" "}
+                <div className="inputBox d-flex my-2 w-100 justify-content-center align-items-center">
+                  <div className="updateIcon px-2">✎</div>
+                  <InputLabel
+                    type="text"
+                    classDesign="me-3"
+                    name="lastName"
+                    functionHandler={(e) => InputHandlerRegister(e)}
+                    placeholder={"Apellido: " + userData.lastName}
+                    onBlurFunction={(e) => InputRegisterCheck(e)}
+                  />
+                </div>
+                {changePasswordClicked && (
+                  <>
+                    <div className="inputBox d-flex my-2 w-100 justify-content-center align-items-center">
+                      <div className="updateIcon px-2">✎</div>
+                      <InputLabel
+                        type="password"
+                        classDesign="me-3"
+                        name="password"
+                        functionHandler={(e) => InputHandlerRegister(e)}
+                        placeholder="Nueva contraseña"
+                        onBlurFunction={(e) => InputRegisterCheck(e)}
+                      />
+                    </div>
+                    <div className="inputBox d-flex my-2 w-100 justify-content-center align-items-center">
+                      <div className="updateIcon px-2">✎</div>
+                      <InputLabel
+                        type="password"
+                        classDesign="me-3"
+                        name="password1"
+                        functionHandler={(e) => InputHandlerRegister(e)}
+                        placeholder="Confirmar nueva contraseña"
+                        onBlurFunction={(e) => InputRegisterCheck(e)}
+                      />
+                    </div>
+                  </>
+                )}
+                <div className="buttonsContainer w-100 my-2 d-flex justify-content-around align-items-center flex-column">
+                  <Button
+                    className="buttonAuthColor"
+                    name="Cambiar contraseña"
+                    path=""
+                    functionButton={handlePasswordChangeClick}
+                  />
+                  <Button
+                    className="buttonAuthColor"
+                    name="Guardar cambios"
+                    path=""
+                    functionButton={(e) => registerMeHandler(e)}
+                  />
+                </div>
               </Col>
             </Row>
           </Col>
