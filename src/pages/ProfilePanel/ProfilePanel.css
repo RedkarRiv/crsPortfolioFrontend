@@ -23,6 +23,7 @@
 }
 
 .navLabel {
+    color: white;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
   user-select: none;
@@ -35,6 +36,7 @@
 .navItemActive {
   background-color: white;
   font-weight: bold;
+  color: black;
 }
 
 .profileDataDesign {
@@ -42,10 +44,6 @@
   font-size: 120%;
 }
 
-.profileDataInfo {
-  font-style: italic;
-  font-size: 90%;
-}
 .profileDataTitle {
   font-weight: bold;
 }
@@ -78,6 +76,11 @@
     padding: 0.3em;
     text-align: center;
     }
+
+.profileDataBlocked {
+border: 0}
+
+
 
 @media (max-width: 576px) {
   .slideProfile {

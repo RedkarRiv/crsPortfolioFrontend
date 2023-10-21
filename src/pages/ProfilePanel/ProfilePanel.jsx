@@ -16,10 +16,13 @@ export const ProfilePanel = () => {
   const credentialCheck = credentialsRdx?.credentials?.token;
 
   //EDIT PROFILE DATA
-  const [enableEditingDataName, setEnableEditingDataName] = useState(false);
+  //FIRSTNAME
+  const [enableEditingDataFirstname, setEnableEditingDataFirstname] =
+    useState(false);
   const handleEnableEditingDataName = () => {
-    setEnableEditingDataName(!enableEditingDataName);
+    setEnableEditingDataFirstname(!enableEditingDataFirstname);
   };
+  //LASTNAME
 
   const [enableEditingDataLastname, setEnableEditingDataLastname] =
     useState(false);
@@ -74,7 +77,7 @@ export const ProfilePanel = () => {
   }, [credentialsRdx]);
 
   //DATE FORMAT
-  const formatedDated = moment(userData.createdAt).format("DD/MM/YYYY HH:mm");
+  const formatedDated = moment(userData.createdAt).format("DD/MM/YYYY");
 
   return (
     <>
@@ -114,14 +117,8 @@ export const ProfilePanel = () => {
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
               {selectedNavItem === "Mi perfil" ? (
                 <Col className="d-flex col-11 col-md-8 h-100 justify-content-center m-0 p-0 flex-column">
-                  <div className="profileDataInfo text-light w-100 d-flex justify-content-center mt-1">
-                    Cuenta: {userData.email}
-                  </div>
-                  <div className="profileDataInfo text-light w-100 d-flex justify-content-center mt-1">
-                    Activo desde: {formatedDated}
-                  </div>
-                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
-                    {!enableEditingDataName ? (
+                  <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
+                    {!enableEditingDataFirstname ? (
                       <>
                         <div
                           className="updateIcon"
@@ -144,17 +141,17 @@ export const ProfilePanel = () => {
                         </div>
                         <InputLabel
                           type="text"
-                          classDesign="me-3"
+                          classDesign=""
                           name="firstName"
                           functionHandler={(e) => InputHandlerRegister(e)}
-                          placeholder="Nueva nombre"
+                          placeholder="Nuevo nombre"
                           onBlurFunction={(e) => InputRegisterCheck(e)}
                         />
                       </div>
                     )}
                   </div>
 
-                  <div className="inputBox d-flex my-2 w-100 justify-content-center align-items-center">
+                  <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
                     {!enableEditingDataLastname ? (
                       <>
                         <div
@@ -178,7 +175,7 @@ export const ProfilePanel = () => {
                         </div>
                         <InputLabel
                           type="text"
-                          classDesign="me-3"
+                          classDesign=""
                           name="lastName"
                           functionHandler={(e) => InputHandlerRegister(e)}
                           placeholder="Nuevo apellido"
@@ -187,9 +184,30 @@ export const ProfilePanel = () => {
                       </div>
                     )}
                   </div>
+                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+                    <div className="updateIcon"></div>
+                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                      <div className="profileDataTitle me-2">Email:</div>{" "}
+                      {userData.email}
+                    </div>
+                  </div>
+                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+                    <div className="updateIcon"></div>
+                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                      <div className="profileDataTitle me-2">Estado:</div>{" "}
+                      Activa
+                    </div>
+                  </div>
+                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+                    <div className="updateIcon"></div>
+                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                      <div className="profileDataTitle me-2">Creación:</div>{" "}
+                      {formatedDated}
+                    </div>
+                  </div>
                   {changePasswordClicked && (
                     <>
-                      <div className="w-100 d-flex justify-content-center align-items-center flex-column">
+                      <div className="w-100 d-flex justify-content-center my-2 align-items-center flex-column">
                         <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
                           <InputLabel
                             type="password"
@@ -213,7 +231,7 @@ export const ProfilePanel = () => {
                       </div>
                     </>
                   )}
-                  <div className="buttonsContainer w-100 my-2 d-flex justify-content-around align-items-center flex-column">
+                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column">
                     <Button
                       className="buttonAuthColor"
                       name="Cambiar contraseña"

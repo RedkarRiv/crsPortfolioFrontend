@@ -61,7 +61,7 @@ export const LoginForm = () => {
         };
         console.log(datosBackend);
         dispatch(login({ credentials: datosBackend }));
-        navigate("/home");
+        navigate("/profile");
         setErrorMessage("");
       })
       .catch((error) => {
