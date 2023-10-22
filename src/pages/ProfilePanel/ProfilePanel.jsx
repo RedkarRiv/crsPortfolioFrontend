@@ -7,8 +7,9 @@ import { useSelector } from "react-redux";
 import { userDataCheck } from "../../pages/userSlice";
 import { Button } from "../../common/Button/Button";
 import moment from "moment";
-import Nav from "react-bootstrap/Nav";
 import { useNavigate } from "react-router-dom";
+import { useNav } from "../../services/NavContext";
+import { NavbarProfile } from "../../common/ProfileNavbar/ProfileNavbar";
 
 export const ProfilePanel = () => {
   const navigate = useNavigate();
@@ -16,15 +17,17 @@ export const ProfilePanel = () => {
   const credentialCheck = credentialsRdx?.credentials?.token;
   const roleCheck = credentialsRdx?.credentials?.user?.roleId;
 
-  //EDIT PROFILE DATA
-  //FIRSTNAME
+  //PROFILE NAVBAR SELECTION
+  const { selectedNavItem } = useNav();
+
+  //EDIT PROFILE DATA FIRSTNAME
   const [enableEditingDataFirstname, setEnableEditingDataFirstname] =
     useState(false);
   const handleEnableEditingDataName = () => {
     setEnableEditingDataFirstname(!enableEditingDataFirstname);
   };
-  //LASTNAME
 
+  //EDIT PROFILE DATA LASTNAME
   const [enableEditingDataLastname, setEnableEditingDataLastname] =
     useState(false);
 
@@ -39,12 +42,6 @@ export const ProfilePanel = () => {
     setChangePasswordClicked(!changePasswordClicked);
   };
 
-  //PROFILE NAVBAR SELECTION
-  const [selectedNavItem, setSelectedNavItem] = useState("Mi perfil");
-
-  const handleNavItemClick = (itemName) => {
-    setSelectedNavItem(itemName);
-  };
   //NO CREDENTIALS BLOCK
   const credentialsActive = () => {
     if (!credentialsRdx) {
@@ -92,43 +89,9 @@ export const ProfilePanel = () => {
             Bienvenido a tu perfil
           </Col>
         </Row>
-
         <Row className="w-100 h-auto d-flex px-3 m-0 justify-content-center">
           <Col className="slideProfile p-3 col-8">
-            <Nav variant="tabs" defaultActiveKey="/home">
-              <Nav.Item>
-                <div
-                  className={`navLabel p-2 mx-2 ${
-                    selectedNavItem === "Mi perfil" ? "navItemActive" : ""
-                  }`}
-                  onClick={() => handleNavItemClick("Mi perfil")}
-                >
-                  Perfil
-                </div>{" "}
-              </Nav.Item>
-              <Nav.Item>
-                <div
-                  className={`navLabel p-2 mx-2 ${
-                    selectedNavItem === "Mis pedidos" ? "navItemActive" : ""
-                  }`}
-                  onClick={() => handleNavItemClick("Mis pedidos")}
-                >
-                  Pedidos
-                </div>{" "}
-              </Nav.Item>
-              {roleCheck == 2 ? (
-                <Nav.Item>
-                  <div
-                    className={`navLabel p-2 mx-2 ${
-                      selectedNavItem === "Panel Admin" ? "navItemActive" : ""
-                    }`}
-                    onClick={() => handleNavItemClick("Panel Admin")}
-                  >
-                    Admin
-                  </div>{" "}
-                </Nav.Item>
-              ) : null}
-            </Nav>
+            <NavbarProfile />
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
               {selectedNavItem === "Mi perfil" ? (
                 <Col className="d-flex col-11 col-md-11 h-100 justify-content-center m-0 p-0 flex-column">
@@ -165,7 +128,6 @@ export const ProfilePanel = () => {
                       </div>
                     )}
                   </div>
-
                   <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
                     {!enableEditingDataLastname ? (
                       <>

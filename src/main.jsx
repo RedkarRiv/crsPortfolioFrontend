@@ -8,8 +8,9 @@ import store from "./app/store.js";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import { Provider } from "react-redux";
-import  { NavbarTop } from "./common/Navbar/Navbar.jsx";
+import { NavbarTop } from "./common/Navbar/Navbar.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
+import { NavProvider } from "./services/NavContext.jsx";
 
 const persistor = persistStore(store);
 const scrollToTop = () => {
@@ -24,10 +25,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <NavbarTop scrollToTop={scrollToTop} />
-          <App />
-          <Footer/>
-
+          <NavProvider>
+            <NavbarTop scrollToTop={scrollToTop} />
+            <App />
+            <Footer />
+          </NavProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>
