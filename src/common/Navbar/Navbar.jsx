@@ -62,7 +62,8 @@ export const NavbarTop = ({ scrollToTop }) => {
                   onClick={() => {
                     navigate("/");
                     scrollToTop();
-                  }}                >
+                  }}
+                >
                   Inicio
                 </div>
                 <div
@@ -94,13 +95,17 @@ export const NavbarTop = ({ scrollToTop }) => {
 
             {newToken ? (
               <Nav className="profileButtons w-25 text-light d-flex justify-content-center align-items-center text-center">
-                <div className="p-1" onClick={() => navigate("/profile")}>
+                <div className="p-1 me-2 accountButtons" onClick={() => navigate("/profile")}>
                   {" "}
-                  <img
-                    src={AccountAvatar}
-                    alt="Mi cuenta"
-                    className="avatarAccountDesign"
-                  />
+                  <div>
+                    <img
+                      src={AccountAvatar}
+                      alt="Mi cuenta"
+                      className="avatarAccountDesign"
+                    />
+                    <div className="p-1 exitButton" >Perfil</div>
+                    
+                  </div>
                 </div>
                 <div className="p-1 exitButton" onClick={() => logOut()}>
                   Logout

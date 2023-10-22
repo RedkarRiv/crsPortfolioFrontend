@@ -53,3 +53,7 @@
 .authButtons {
   width: 5%;
 }
+
+.accountButtons:hover{
+  transform: scale(1.1);
+}

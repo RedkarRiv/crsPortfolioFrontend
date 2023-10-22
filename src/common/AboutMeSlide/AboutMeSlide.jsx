@@ -48,7 +48,7 @@ export const AboutMeSlide = ({ id }) => {
           <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
             <div className="techContentTitle">BACKGROUND</div>
             <div className="techContentDescription py-4">
-              Mi experiencia en Marketing y RRPP me permite complementar mi enfoque a la hora de programar priorizando el usuario y el producto en todo momento. 
+              Mi experiencia en Marketing digital y RRPP, así como gestión de equipos, me permite mejorar mi diligencia a la hora de programar. 
             </div>
             <div className="technologyItems d-flex flex-column align-items-center">
               <div className="techItem my-1">MARKETING & COMUNICACIÓN</div>
