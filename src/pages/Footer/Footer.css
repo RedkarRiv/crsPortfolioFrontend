@@ -1,4 +1,16 @@
 .footerBG {
-    background-color: rgb(3, 3, 45);
-    color: white;
+  background-color: rgb(3, 3, 45);
+  color: white;
+}
+
+.logoResize {
+  width: 2em;
+  user-select: none;
+  cursor: pointer;
+}
+
+.logoResize2 {
+  width: 1.7em;
+  user-select: none;
+  cursor: pointer;
 }

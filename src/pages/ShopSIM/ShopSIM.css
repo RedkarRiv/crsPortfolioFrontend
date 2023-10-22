@@ -70,7 +70,8 @@
   color: black;
 }
 .productAddButton {
-  background-color: rgb(7, 142, 23);
+  font-weight: bold;
+  background-color: rgb(8, 168, 209);
 }
 @media (min-width: 1440px) {
   .productsContainer {
