@@ -48,6 +48,7 @@ export const ProfilePanel = () => {
   //NO CREDENTIALS BLOCK
   const credentialsActive = () => {
     if (!credentialsRdx) {
+      scrollToTop();
       navigate("/");
     }
   };
@@ -92,9 +93,6 @@ export const ProfilePanel = () => {
           </Col>
         </Row>
 
-
-
-
         <Row className="w-100 h-auto d-flex px-3 m-0 justify-content-center">
           <Col className="slideProfile p-3 col-8">
             <Nav variant="tabs" defaultActiveKey="/home">
@@ -133,19 +131,19 @@ export const ProfilePanel = () => {
             </Nav>
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
               {selectedNavItem === "Mi perfil" ? (
-                <Col className="d-flex col-11 col-md-8 h-100 justify-content-center m-0 p-0 flex-column">
+                <Col className="d-flex col-11 col-md-11 h-100 justify-content-center m-0 p-0 flex-column">
                   <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
                     {!enableEditingDataFirstname ? (
                       <>
-                        <div
-                          className="updateIcon"
-                          onClick={() => handleEnableEditingDataName()}
-                        >
-                          ✎
-                        </div>
-                        <div className="profileDataDesign w-75 d-flex justify-content-center text-light pe-4">
+                        <div className="profileDataDesign d-flex justify-content-between text-light px-4">
                           <div className="profileDataTitle me-2">Nombre:</div>{" "}
                           {userData.firstName}
+                          <div
+                            className="updateIcon"
+                            onClick={() => handleEnableEditingDataName()}
+                          >
+                            ✎
+                          </div>
                         </div>
                       </>
                     ) : (
@@ -158,7 +156,7 @@ export const ProfilePanel = () => {
                         </div>
                         <InputLabel
                           type="text"
-                          classDesign=""
+                          classDesign="intputSize"
                           name="firstName"
                           functionHandler={(e) => InputHandlerRegister(e)}
                           placeholder="Nuevo nombre"
@@ -171,19 +169,19 @@ export const ProfilePanel = () => {
                   <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
                     {!enableEditingDataLastname ? (
                       <>
-                        <div
-                          className="updateIcon"
-                          onClick={() => handleEnableEditingDataLastname()}
-                        >
-                          ✎
-                        </div>
-                        <div className="profileDataDesign w-75 d-flex justify-content-center text-light pe-4">
+                        <div className="profileDataDesign d-flex justify-content-between text-light px-4">
                           <div className="profileDataTitle me-2">Apellido:</div>{" "}
                           {userData.lastName}
+                          <div
+                            className="updateIcon"
+                            onClick={() => handleEnableEditingDataLastname()}
+                          >
+                            ✎
+                          </div>
                         </div>
                       </>
                     ) : (
-                      <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
+                      <div className="inputBox d-flex my-2 w-75  justify-content-center align-items-center">
                         <div
                           className="updateIcon me-2"
                           onClick={() => handleEnableEditingDataLastname()}
@@ -192,7 +190,7 @@ export const ProfilePanel = () => {
                         </div>
                         <InputLabel
                           type="text"
-                          classDesign=""
+                          classDesign="intputSize"
                           name="lastName"
                           functionHandler={(e) => InputHandlerRegister(e)}
                           placeholder="Nuevo apellido"
@@ -203,21 +201,21 @@ export const ProfilePanel = () => {
                   </div>
                   <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
                     <div className="updateIcon"></div>
-                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
                       <div className="profileDataTitle me-2">Email:</div>{" "}
                       {userData.email}
                     </div>
                   </div>
                   <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
                     <div className="updateIcon"></div>
-                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
                       <div className="profileDataTitle me-2">Estado:</div>{" "}
                       {userData.userStatus ? "Activa" : "Inactiva"}
                     </div>
                   </div>
                   <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
                     <div className="updateIcon"></div>
-                    <div className="profileDataDesign  w-75 d-flex justify-content-center text-light pe-4">
+                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
                       <div className="profileDataTitle me-2">Creación:</div>{" "}
                       {formatedDated}
                     </div>
@@ -248,7 +246,7 @@ export const ProfilePanel = () => {
                       </div>
                     </>
                   )}
-                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column flex-xxl-row">
+                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column">
                     <Button
                       className=""
                       name="Cambiar contraseña"
@@ -273,13 +271,12 @@ export const ProfilePanel = () => {
                 </Col>
               ) : null}
               {selectedNavItem === "Mis pedidos" ? <Col>Pedidosss</Col> : null}
-              {selectedNavItem === "Panel Admin" ? <Col>Admin panel</Col> : null}
-
+              {selectedNavItem === "Panel Admin" ? (
+                <Col>Admin panel</Col>
+              ) : null}
             </Row>
           </Col>
         </Row>
-
-        
       </Container>
     </>
   );

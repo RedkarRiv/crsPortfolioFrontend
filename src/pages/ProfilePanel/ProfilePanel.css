@@ -42,12 +42,17 @@
 .profileDataDesign {
   border-bottom: grey 0.01em solid;
   font-size: 120%;
+  width: 50%;
 }
 
 .profileDataTitle {
     color: rgb(255, 162, 0);
   font-weight: bold;
 }
+.intputSize {
+    width: 50%;
+}
+
 
 .myProfileBG {
   background-color: rgb(55, 55, 74);
@@ -65,6 +70,7 @@
   color: white;
   user-select: none;
   cursor: pointer;
+  position: relative;
 }
 
 .updateIcon:hover {
@@ -95,4 +101,10 @@ border: 0}
   .profilePanelTitle {
     font-size: 140%;
   }
+  .profileDataDesign {
+    width: 100%;
+  }
+  .intputSize {
+    width: 100%;
+}
 }
