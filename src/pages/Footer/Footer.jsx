@@ -5,7 +5,7 @@ import gitLogo from "../../img/gitLogo.png";
 import linkedinLogo from "../../img/linkedinLogo.png";
 
 const Footer = () => (
-  <footer className="page-footer font-small blue py-3 footerBG">
+  <footer className="page-footer font-small blue py-2 footerBG">
     <Container
       fluid
       className="d-flex justify-content-around align-items-center"
