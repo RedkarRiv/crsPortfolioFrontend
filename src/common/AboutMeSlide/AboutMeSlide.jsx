@@ -13,8 +13,8 @@ export const AboutMeSlide = ({ id }) => {
           <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
             <div className="techContentTitle">FRONTEND</div>
             <div className="techContentDescription py-4">
-              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
-              al sircoo
+              Me encanta diseñar paginas y componentes intuitivos que mejoren la
+              UX y faciliten la escalabilidad de los proyectos.
             </div>
             <div className="technologyItems d-flex flex-column align-items-center">
               <div className="techItem my-1">JAVASCRIPT</div>
@@ -30,8 +30,9 @@ export const AboutMeSlide = ({ id }) => {
           <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
             <div className="techContentTitle">BACKEND</div>
             <div className="techContentDescription py-4">
-              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
-              al sircoo
+              Disfruto trabajando con lógica y procesamiento de datos para
+              facilitar la comunicación entre APIs, así como la seguridad en
+              todos sus procesos.
             </div>
             <div className="technologyItems d-flex flex-column align-items-center">
               <div className="techItem my-1">JAVASCRIPT</div>
@@ -47,8 +48,7 @@ export const AboutMeSlide = ({ id }) => {
           <div className="techLabel d-flex justify-content-start align-items-center flex-column py-4 px-3">
             <div className="techContentTitle">BACKGROUND</div>
             <div className="techContentDescription py-4">
-              Tiene musho peligro diodenoo. Pecador ahorarr a wan mamaar llevame
-              al sircoo
+              Mi experiencia en Marketing y RRPP me permite complementar mi enfoque a la hora de programar priorizando el usuario y el producto en todo momento. 
             </div>
             <div className="technologyItems d-flex flex-column align-items-center">
               <div className="techItem my-1">MARKETING & COMUNICACIÓN</div>
