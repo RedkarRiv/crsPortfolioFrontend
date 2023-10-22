@@ -1,5 +1,5 @@
 .shopBG {
-  background-color: white;
+  background-color: rgb(161, 152, 152);
   min-height: 100vh;
   overflow-x: hidden;
   padding-top: 75px;
@@ -12,4 +12,68 @@
 .shopTitle {
   font-size: 200%;
   font-weight: bold;
+}
+
+.searchLogo {
+  width: 2em;
+  transform: scale(0.8);
+}
+.searchLab {
+  background-color: white;
+  border-radius: 1em;
+  height: 2em;
+}
+.searchButton {
+  background-color: green;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+.productTitle {
+  font-weight: bold;
+}
+.searchButton:hover {
+  background-color: rgb(3, 67, 3);
+}
+.productCardButtons {
+  border-top: solid 0.1em darkolivegreen;
+}
+.productsContainer {
+  background-color: rgb(215, 215, 215);
+  border-top: grey solid 0.1em;
+  width: 100%;
+}
+.productCard {
+  background-color: white;
+
+  color: black;
+  height: 10em;
+  width: 15em;
+  text-align: center;
+  border: solid 0.1em rgb(107, 106, 106);
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.745);
+}
+.categoriesContainer {
+  background-color: rgb(215, 215, 215);
+  border-right: grey solid 0.1em;
+}
+.productImg {
+  width: 100%;
+  background-color: rgb(0, 6, 0);
+  height: 60%;
+  border-bottom: solid 0.1em darkolivegreen;
+}
+.productFavoriteButton {
+  background-color: rgb(255, 166, 0);
+  color: black;
+}
+.productAddButton {
+  background-color: rgb(7, 142, 23);
+}
+@media (min-width: 1440px) {
+  .productsContainer {
+    width: 90%;
+  }
 }

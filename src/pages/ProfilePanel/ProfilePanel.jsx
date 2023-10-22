@@ -42,7 +42,7 @@ export const ProfilePanel = () => {
           <Col className="slideProfile p-3 col-8">
             <NavbarProfile />
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
-              {selectedNavItem === "Mi perfil" ? <MyProfile/>: null}
+              {selectedNavItem === "Mi perfil" ? <MyProfile /> : null}
               {selectedNavItem === "Mis pedidos" ? <Col>Pedidosss</Col> : null}
               {selectedNavItem === "Panel Admin" ? (
                 <Col>Admin panel</Col>

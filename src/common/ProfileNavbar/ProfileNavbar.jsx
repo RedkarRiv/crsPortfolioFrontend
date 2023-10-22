@@ -1,16 +1,16 @@
 import React from "react";
 import "./ProfileNavbar.css";
 import Nav from "react-bootstrap/Nav";
-import { useNav } from '../../services/NavContext'; 
+import { useNav } from "../../services/NavContext";
 import { useSelector } from "react-redux";
 import { userDataCheck } from "../../pages/userSlice";
 
 export const NavbarProfile = () => {
-    const credentialsRdx = useSelector(userDataCheck);
-    const roleCheck = credentialsRdx?.credentials?.user?.roleId;
+  const credentialsRdx = useSelector(userDataCheck);
+  const roleCheck = credentialsRdx?.credentials?.user?.roleId;
 
-      //PROFILE NAVBAR SELECTION
-      const { selectedNavItem, setSelectedNavItem } = useNav(); 
+  //PROFILE NAVBAR SELECTION
+  const { selectedNavItem, setSelectedNavItem } = useNav();
 
   const handleNavItemClick = (itemName) => {
     setSelectedNavItem(itemName);

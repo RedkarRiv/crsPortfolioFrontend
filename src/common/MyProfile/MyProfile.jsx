@@ -61,7 +61,7 @@ export const MyProfile = () => {
 
   return (
     <Col className="d-flex col-11 col-md-11 h-100 justify-content-center m-0 p-0 flex-column">
-      <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
+      <div className="d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
         {!enableEditingDataFirstname ? (
           <>
             <div className="profileDataDesign d-flex justify-content-between text-light px-4">
@@ -76,7 +76,7 @@ export const MyProfile = () => {
             </div>
           </>
         ) : (
-          <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
+          <div className="d-flex my-2 w-75 justify-content-center align-items-center">
             <div
               className="updateIcon me-2"
               onClick={() => handleEnableEditingDataName()}
@@ -94,7 +94,7 @@ export const MyProfile = () => {
           </div>
         )}
       </div>
-      <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
+      <div className="d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
         {!enableEditingDataLastname ? (
           <>
             <div className="profileDataDesign d-flex justify-content-between text-light px-4">
@@ -127,20 +127,20 @@ export const MyProfile = () => {
           </div>
         )}
       </div>
-      <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+      <div className="d-flex mt-4 w-100 justify-content-center align-items-center">
         <div className="updateIcon"></div>
         <div className="profileDataDesign d-flex justify-content-between text-light px-4">
           <div className="profileDataTitle me-2">Email:</div> {userData.email}
         </div>
       </div>
-      <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+      <div className="d-flex mt-4 w-100 justify-content-center align-items-center">
         <div className="updateIcon"></div>
         <div className="profileDataDesign d-flex justify-content-between text-light px-4">
           <div className="profileDataTitle me-2">Estado:</div>{" "}
           {userData.userStatus ? "Activa" : "Inactiva"}
         </div>
       </div>
-      <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
+      <div className="d-flex mt-4 w-100 justify-content-center align-items-center">
         <div className="updateIcon"></div>
         <div className="profileDataDesign d-flex justify-content-between text-light px-4">
           <div className="profileDataTitle me-2">Creación:</div> {formatedDated}
@@ -149,7 +149,7 @@ export const MyProfile = () => {
       {changePasswordClicked && (
         <>
           <div className="w-100 d-flex justify-content-center my-2 align-items-center flex-column">
-            <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
+            <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
                 classDesign="me-3"
@@ -159,7 +159,7 @@ export const MyProfile = () => {
                 onBlurFunction={(e) => InputRegisterCheck(e)}
               />
             </div>
-            <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
+            <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
                 classDesign="me-3"
@@ -188,7 +188,7 @@ export const MyProfile = () => {
           />
         ) : null}
         <Button
-          className=""
+          className="text-center"
           name="Guardar cambios"
           path=""
           functionButton={(e) => registerMeHandler(e)}
