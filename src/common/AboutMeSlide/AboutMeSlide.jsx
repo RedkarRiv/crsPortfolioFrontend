@@ -1,11 +1,11 @@
 import React from "react";
 import "./AboutMeSlide.css";
 import { Col, Row } from "react-bootstrap";
-
-export const AboutMeSlide = ({id}) => {
+import CV from "../../pdfs/CarlosRedondo_CV.pdf";
+export const AboutMeSlide = ({ id }) => {
   return (
     <>
-      <Row id={id}  className="aboutMeBG m-0 py-5 d-flex justify-content-center">
+      <Row id={id} className="aboutMeBG m-0 py-5 d-flex justify-content-center">
         <Col className="col-12 techTitle d-flex text-center justify-content-center align-items-center py-3 px-0 m-0">
           Acerca de mí
         </Col>
@@ -60,7 +60,9 @@ export const AboutMeSlide = ({id}) => {
           </div>{" "}
         </Col>
         <Col className="col-12 downloadFilesContainer d-flex justify-content-center align-items-center mt-5 p-0">
-          <div className="fileDownload px-3">Descargar CV</div>
+          <a className="fileDownload px-3" href={CV} download>
+            Descargar CV
+          </a>
         </Col>
       </Row>
     </>
