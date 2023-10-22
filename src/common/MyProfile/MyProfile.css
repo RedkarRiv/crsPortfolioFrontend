@@ -17,6 +17,10 @@
 .updateIcon:hover {
   transform: scale(1.3);
 }
+
+.intputSize {
+    width: 50%;
+}
 @media (max-width: 576px) {
   .profileDataDesign {
     width: 100%;

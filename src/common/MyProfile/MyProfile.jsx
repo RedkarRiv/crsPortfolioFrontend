@@ -7,8 +7,10 @@ import { Button } from "../../common/Button/Button";
 import moment from "moment";
 import { useSelector } from "react-redux";
 import { userDataCheck } from "../../pages/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export const MyProfile = () => {
+  const navigate = useNavigate();
   const credentialsRdx = useSelector(userDataCheck);
   const credentialCheck = credentialsRdx?.credentials?.token;
   const roleCheck = credentialsRdx?.credentials?.user?.roleId;
@@ -77,12 +79,7 @@ export const MyProfile = () => {
           </>
         ) : (
           <div className="d-flex my-2 w-75 justify-content-center align-items-center">
-            <div
-              className="updateIcon me-2"
-              onClick={() => handleEnableEditingDataName()}
-            >
-              ✎
-            </div>
+
             <InputLabel
               type="text"
               classDesign="intputSize"
@@ -91,6 +88,12 @@ export const MyProfile = () => {
               placeholder="Nuevo nombre"
               onBlurFunction={(e) => InputRegisterCheck(e)}
             />
+                        <div
+            className="updateIcon ms-5"
+            onClick={() => handleEnableEditingDataName()}
+            >
+              ✎
+            </div>
           </div>
         )}
       </div>
@@ -110,12 +113,7 @@ export const MyProfile = () => {
           </>
         ) : (
           <div className="inputBox d-flex my-2 w-75  justify-content-center align-items-center">
-            <div
-              className="updateIcon me-2"
-              onClick={() => handleEnableEditingDataLastname()}
-            >
-              ✎
-            </div>
+           
             <InputLabel
               type="text"
               classDesign="intputSize"
@@ -123,7 +121,12 @@ export const MyProfile = () => {
               functionHandler={(e) => InputHandlerRegister(e)}
               placeholder="Nuevo apellido"
               onBlurFunction={(e) => InputRegisterCheck(e)}
-            />
+            />           <div
+            className="updateIcon ms-5"
+            onClick={() => handleEnableEditingDataLastname()}
+          >
+            ✎
+          </div>
           </div>
         )}
       </div>
@@ -148,11 +151,11 @@ export const MyProfile = () => {
       </div>
       {changePasswordClicked && (
         <>
-          <div className="w-100 d-flex justify-content-center my-2 align-items-center flex-column">
+          <div className="w-100 d-flex justify-content-center mt-5 align-items-center flex-column">
             <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
-                classDesign="me-3"
+                classDesign="me-3 intputSize"
                 name="password"
                 functionHandler={(e) => InputHandlerRegister(e)}
                 placeholder="Nueva contraseña"
@@ -162,7 +165,7 @@ export const MyProfile = () => {
             <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
-                classDesign="me-3"
+                classDesign="me-3 intputSize"
                 name="password1"
                 functionHandler={(e) => InputHandlerRegister(e)}
                 placeholder="Confirmar nueva contraseña"
@@ -172,7 +175,7 @@ export const MyProfile = () => {
           </div>
         </>
       )}
-      <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-center align-items-center flex-row">
+      <div className="buttonsContainer w-100  mb-2 d-flex justify-content-center align-items-center flex-row">
         <Button
           className="me-2 text-center"
           name="Cambiar contraseña"
