@@ -1,46 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./ProfilePanel.css";
 import { Col, Container, Row } from "react-bootstrap";
-import { InputLabel } from "../../common/InputLabel/InputLabel";
-import { getProfile } from "../../services/apiCall";
 import { useSelector } from "react-redux";
 import { userDataCheck } from "../../pages/userSlice";
-import { Button } from "../../common/Button/Button";
-import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { useNav } from "../../services/NavContext";
 import { NavbarProfile } from "../../common/ProfileNavbar/ProfileNavbar";
+import { MyProfile } from "../../common/MyProfile/MyProfile";
 
 export const ProfilePanel = () => {
   const navigate = useNavigate();
   const credentialsRdx = useSelector(userDataCheck);
-  const credentialCheck = credentialsRdx?.credentials?.token;
-  const roleCheck = credentialsRdx?.credentials?.user?.roleId;
 
   //PROFILE NAVBAR SELECTION
   const { selectedNavItem } = useNav();
-
-  //EDIT PROFILE DATA FIRSTNAME
-  const [enableEditingDataFirstname, setEnableEditingDataFirstname] =
-    useState(false);
-  const handleEnableEditingDataName = () => {
-    setEnableEditingDataFirstname(!enableEditingDataFirstname);
-  };
-
-  //EDIT PROFILE DATA LASTNAME
-  const [enableEditingDataLastname, setEnableEditingDataLastname] =
-    useState(false);
-
-  const handleEnableEditingDataLastname = () => {
-    setEnableEditingDataLastname(!enableEditingDataLastname);
-  };
-
-  //NEW PASSWORD DISPLAY
-  const [changePasswordClicked, setChangePasswordClicked] = useState(false);
-
-  const handlePasswordChangeClick = () => {
-    setChangePasswordClicked(!changePasswordClicked);
-  };
 
   //NO CREDENTIALS BLOCK
   const credentialsActive = () => {
@@ -53,30 +26,6 @@ export const ProfilePanel = () => {
   useEffect(() => {
     credentialsActive();
   }, []);
-
-  //GET PROFILE
-  const [userData, setUserData] = useState({});
-
-  const getMyProfile = () => {
-    getProfile(credentialCheck)
-      .then((resultado) => {
-        if (resultado.data.message == "Token invalido") {
-          navigate("/");
-          return;
-        } else {
-          setUserData(resultado.data.data);
-          console.log(userData);
-        }
-      })
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    getMyProfile();
-  }, [credentialsRdx]);
-
-  //DATE FORMAT
-  const formatedDated = moment(userData.createdAt).format("DD/MM/YYYY");
 
   return (
     <>
@@ -93,145 +42,7 @@ export const ProfilePanel = () => {
           <Col className="slideProfile p-3 col-8">
             <NavbarProfile />
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
-              {selectedNavItem === "Mi perfil" ? (
-                <Col className="d-flex col-11 col-md-11 h-100 justify-content-center m-0 p-0 flex-column">
-                  <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
-                    {!enableEditingDataFirstname ? (
-                      <>
-                        <div className="profileDataDesign d-flex justify-content-between text-light px-4">
-                          <div className="profileDataTitle me-2">Nombre:</div>{" "}
-                          {userData.firstName}
-                          <div
-                            className="updateIcon"
-                            onClick={() => handleEnableEditingDataName()}
-                          >
-                            ✎
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
-                        <div
-                          className="updateIcon me-2"
-                          onClick={() => handleEnableEditingDataName()}
-                        >
-                          ✎
-                        </div>
-                        <InputLabel
-                          type="text"
-                          classDesign="intputSize"
-                          name="firstName"
-                          functionHandler={(e) => InputHandlerRegister(e)}
-                          placeholder="Nuevo nombre"
-                          onBlurFunction={(e) => InputRegisterCheck(e)}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  <div className="inputBox d-flex mt-4 pe-2 w-100 justify-content-center align-items-center">
-                    {!enableEditingDataLastname ? (
-                      <>
-                        <div className="profileDataDesign d-flex justify-content-between text-light px-4">
-                          <div className="profileDataTitle me-2">Apellido:</div>{" "}
-                          {userData.lastName}
-                          <div
-                            className="updateIcon"
-                            onClick={() => handleEnableEditingDataLastname()}
-                          >
-                            ✎
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="inputBox d-flex my-2 w-75  justify-content-center align-items-center">
-                        <div
-                          className="updateIcon me-2"
-                          onClick={() => handleEnableEditingDataLastname()}
-                        >
-                          ✎
-                        </div>
-                        <InputLabel
-                          type="text"
-                          classDesign="intputSize"
-                          name="lastName"
-                          functionHandler={(e) => InputHandlerRegister(e)}
-                          placeholder="Nuevo apellido"
-                          onBlurFunction={(e) => InputRegisterCheck(e)}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
-                    <div className="updateIcon"></div>
-                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
-                      <div className="profileDataTitle me-2">Email:</div>{" "}
-                      {userData.email}
-                    </div>
-                  </div>
-                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
-                    <div className="updateIcon"></div>
-                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
-                      <div className="profileDataTitle me-2">Estado:</div>{" "}
-                      {userData.userStatus ? "Activa" : "Inactiva"}
-                    </div>
-                  </div>
-                  <div className="inputBox d-flex mt-4 w-100 justify-content-center align-items-center">
-                    <div className="updateIcon"></div>
-                    <div className="profileDataDesign d-flex justify-content-between text-light px-4">
-                      <div className="profileDataTitle me-2">Creación:</div>{" "}
-                      {formatedDated}
-                    </div>
-                  </div>
-                  {changePasswordClicked && (
-                    <>
-                      <div className="w-100 d-flex justify-content-center my-2 align-items-center flex-column">
-                        <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
-                          <InputLabel
-                            type="password"
-                            classDesign="me-3"
-                            name="password"
-                            functionHandler={(e) => InputHandlerRegister(e)}
-                            placeholder="Nueva contraseña"
-                            onBlurFunction={(e) => InputRegisterCheck(e)}
-                          />
-                        </div>
-                        <div className="inputBox d-flex my-2 w-75 justify-content-center align-items-center">
-                          <InputLabel
-                            type="password"
-                            classDesign="me-3"
-                            name="password1"
-                            functionHandler={(e) => InputHandlerRegister(e)}
-                            placeholder="Confirmar nueva contraseña"
-                            onBlurFunction={(e) => InputRegisterCheck(e)}
-                          />
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  <div className="buttonsContainer w-100 mt-3 mb-2 d-flex justify-content-around align-items-center flex-column">
-                    <Button
-                      className=""
-                      name="Cambiar contraseña"
-                      path=""
-                      functionButton={handlePasswordChangeClick}
-                    />
-                    {roleCheck !== 2 ? (
-                      <Button
-                        className="buttonAuthColor2"
-                        name="Desactivar"
-                        path=""
-                        functionButton={handlePasswordChangeClick}
-                      />
-                    ) : null}
-                    <Button
-                      className=""
-                      name="Guardar cambios"
-                      path=""
-                      functionButton={(e) => registerMeHandler(e)}
-                    />
-                  </div>
-                </Col>
-              ) : null}
+              {selectedNavItem === "Mi perfil" ? <MyProfile/>: null}
               {selectedNavItem === "Mis pedidos" ? <Col>Pedidosss</Col> : null}
               {selectedNavItem === "Panel Admin" ? (
                 <Col>Admin panel</Col>
