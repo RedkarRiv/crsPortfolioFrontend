@@ -1,5 +1,5 @@
 .blogBG {
-  background-color: rgb(195, 55, 55);
+  background-color: rgb(18, 85, 124);
   min-height: 100vh;
   overflow-x: hidden;
   padding-top: 75px;
@@ -13,4 +13,54 @@
 .blogTitle {
   font-size: 200%;
   font-weight: bold;
+}
+
+.carrouselContail {
+  background-color: black;
+  width: 50em;
+  height: 20em;
+  border-radius: 0.5em;
+}
+
+.bannerContainer {
+  background-color: black;
+  height: 15em;
+  border-radius: 0.5em;
+}
+.searchLogo {
+  width: 2em;
+  transform: scale(0.8);
+}
+
+.searchPostContainer {
+  background-color: white;
+  border-radius: 1em;
+  width: 30em;
+}
+.searchButton {
+  background-color: green;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+.searchButton:hover {
+  background-color: rgb(3, 67, 3);
+}
+.postsContainer {
+  background-color: blue;
+}
+.postSpotlightDesign {
+  height: 20em;
+  width: 100%;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+.postDesign {
+  background-color: green;
+  height: 10em;
+  width: 100%;
+  text-align: center;
 }
