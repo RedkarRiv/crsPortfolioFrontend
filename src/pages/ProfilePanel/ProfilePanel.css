@@ -39,9 +39,15 @@
   color: black;
 }
 
+.BGcheck {
+  background-color: blue;
+  height: 20em;
+}
 
-
-
+.BGcheck2 {
+  background-color: green;
+  height: 20em;
+}
 
 .myProfileBG {
   background-color: rgb(55, 55, 74);

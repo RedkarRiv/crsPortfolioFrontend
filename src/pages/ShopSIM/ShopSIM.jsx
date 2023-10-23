@@ -9,7 +9,7 @@ export const ShopSIM = () => {
     <div className="shopBG m-0 d-flex justify-content-start align-items-center flex-column">
       <Container
         fluid
-        className="d-flex m-0 p-0 align-items-center flex-column BGcheck"
+        className="d-flex m-0 p-0 align-items-center flex-column"
       >
     
 

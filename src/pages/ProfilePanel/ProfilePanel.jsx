@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useNav } from "../../services/NavContext";
 import { NavbarProfile } from "../../common/ProfileNavbar/ProfileNavbar";
 import { MyProfile } from "../../common/MyProfile/MyProfile";
+import { SideBar } from "../../common/ProfileSideBar/ProfileSideBar";
 
 export const ProfilePanel = () => {
   const navigate = useNavigate();
@@ -43,9 +44,19 @@ export const ProfilePanel = () => {
             <NavbarProfile />
             <Row className="myProfileBG w-100 d-flex justify-content-center align-items-center p-1 m-0">
               {selectedNavItem === "Mi perfil" ? <MyProfile /> : null}
-              {selectedNavItem === "Mis pedidos" ? <Col>Pedidosss</Col> : null}
+              {selectedNavItem === "Mis pedidos" ?  <>
+                  <Col className="col-3 col-md-2 mt-2 BGcheck2">
+                    <SideBar />
+                  </Col>
+                  <Col className="col-9 col-md-10 mt-2 BGcheck">Pedidos</Col>
+                </> : null}
               {selectedNavItem === "Panel Admin" ? (
-                <Col>Admin panel</Col>
+                <>
+                  <Col className="col-3 col-md-2 mt-2 BGcheck2">
+                    <SideBar />
+                  </Col>
+                  <Col className="col-9 col-md-10 mt-2 BGcheck">Admin panel</Col>
+                </>
               ) : null}
             </Row>
           </Col>

@@ -12,15 +12,15 @@ export const BlogSIM = () => {
         className="blogBG m-0 d-flex justify-content-start align-items-center flex-column"
       >
         <Row className="w-100 d-flex justify-content-center my-4">
-          <Col className="col-12 d-flex justify-content-center align-items-center m-0">
+          <Col className="col-12 col-md-3 d-flex justify-content-center align-items-center m-0">
             {/* <div className="carrouselContail text-center">Carrousel</div> */}
 
             <CarouselBox />
           </Col>
         </Row>
         <Row className="w-100 d-flex justify-content-center my-2 mb-4">
-          <Col className="col-12 d-flex justify-content-center align-items-center m-0">
-            <div className="searchPostContainer ps-1 text-center d-flex justify-content-between">
+          <Col className="col-10 col-md-4 d-flex justify-content-center align-items-center m-0 p-0">
+            <div className="searchPostContainer w-100 ps-2 text-center d-flex justify-content-between">
               {" "}
               <img src={searchIcon} className="searchLogo p-1" />{" "}
               <input

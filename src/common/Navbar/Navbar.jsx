@@ -7,6 +7,7 @@ import AccountAvatar from "../../img/avatarAccount.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
+import signatureCRS from "../../img/carlosRedondoSignature.png"
 
 export const NavbarTop = ({ scrollToTop }) => {
   const navigate = useNavigate();
@@ -40,18 +41,18 @@ export const NavbarTop = ({ scrollToTop }) => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="navbarDesign text-white navbar-dark p-3 m-0 d-flex justify-content-center"
+        className="navbarDesign text-white navbar-dark p-2 m-0 d-flex justify-content-center"
         fixed="top"
       >
-        <Container className="m-0 p-0 w-100">
+        <Container className="m-0 p-0  w-100">
           <Navbar.Brand
             onClick={() => {
               navigate("/");
               scrollToTop();
             }}
-            className="ps-md-5 logoDesign"
+            className="logoDesign"
           >
-            ❉ Carlos Redondo ❉
+            <img alt="Carlos Redondo" className="signatureDesign" src={signatureCRS}/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -95,7 +96,10 @@ export const NavbarTop = ({ scrollToTop }) => {
 
             {newToken ? (
               <Nav className="profileButtons w-25 text-light d-flex justify-content-center align-items-center text-center">
-                <div className="p-1 me-2 accountButtons" onClick={() => navigate("/profile")}>
+                <div
+                  className="p-1 me-2 accountButtons"
+                  onClick={() => navigate("/profile")}
+                >
                   {" "}
                   <div>
                     <img
@@ -103,8 +107,7 @@ export const NavbarTop = ({ scrollToTop }) => {
                       alt="Mi cuenta"
                       className="avatarAccountDesign"
                     />
-                    <div className="p-1 exitButton" >Perfil</div>
-                    
+                    <div className="p-1 exitButton">Perfil</div>
                   </div>
                 </div>
                 <div className="p-1 exitButton" onClick={() => logOut()}>

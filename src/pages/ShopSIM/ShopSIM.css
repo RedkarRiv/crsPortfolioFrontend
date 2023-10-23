@@ -45,6 +45,12 @@
   border-top: grey solid 0.1em;
   width: 100%;
 }
+
+.inputSearchDesign {
+  outline: 0;
+  border: 0;
+  width: 100%;
+}
 .productCard {
   background-color: white;
   color: black;

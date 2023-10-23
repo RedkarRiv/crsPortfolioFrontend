@@ -6,6 +6,7 @@
 .logoDesign {
   cursor: pointer;
 }
+
 @media (min-width: 576px) {
   .logoDesign:hover {
     transform: scale(1.2);
@@ -20,6 +21,10 @@
 
 .navbarOptionDesign:hover {
   border-bottom: 0.1em white solid;
+}
+.signatureDesign {
+  height: 3em;
+  filter: invert(100%);
 }
 
 .loginButton,
@@ -54,6 +59,6 @@
   width: 5%;
 }
 
-.accountButtons:hover{
+.accountButtons:hover {
   transform: scale(1.1);
 }
