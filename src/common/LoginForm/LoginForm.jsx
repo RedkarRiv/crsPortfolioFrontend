@@ -77,7 +77,7 @@ export const LoginForm = () => {
 
   return (
     <>
-      <div className="formDesign">
+      <div className="formDesign w-100 d-flex align-items-center flex-column">
         <div className="titleDesign">LOGIN</div>
         <div className="fieldNameDesign">Usuario</div>
         <InputLabel
