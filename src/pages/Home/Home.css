@@ -21,10 +21,9 @@
 
 .slidePhoto {
   background-color: rgb(17, 17, 19);
-  background-image: url("../../img/crsPhoto.jpg");
+  background-image: url("../../img/crsPhoto3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 40%;
   height: 60vh;
   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
 }
@@ -85,6 +84,7 @@
   }
   .containerHome {
     padding-top: 75px;
+    
   }
 }
 

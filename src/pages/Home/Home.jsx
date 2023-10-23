@@ -3,6 +3,7 @@ import "./Home.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { Button } from "../../common/Button/Button";
 import logoCRS from "../../img/LogoCRS.png";
+
 import { AboutMeSlide } from "../../common/AboutMeSlide/AboutMeSlide";
 import { MyProjects } from "../../common/MyProjects/MyProjects";
 import { ContactForm } from "../../common/ContactForm/ContactForm";
