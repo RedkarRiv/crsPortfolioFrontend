@@ -4,12 +4,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import searchIcon from "../../img/searchIcon.png";
 
 export const BlogSIM = () => {
-  const scrollToSection = (targetId) => {
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
   return (
     <>
       <Container
@@ -17,7 +11,9 @@ export const BlogSIM = () => {
         className="blogBG m-0 d-flex justify-content-start align-items-center flex-column"
       >
         <Row className="d-flex p-0 m-0 justify-content-center">
-          <Col className="blogTitle col-12 p-5">Bienvenido a BlogSIM</Col>
+          <Col className="blogTitle col-12 p-5 text-center">
+            Bienvenido a BlogSIM
+          </Col>
         </Row>
         <Row className="w-100 d-flex justify-content-center">
           <Col className="col-12 d-flex justify-content-center align-items-center m-0">
@@ -35,81 +31,81 @@ export const BlogSIM = () => {
             </div>{" "}
           </Col>
         </Row>
-        <Row className="w-75 d-flex justify-content-start align-items-start">
-          <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+        <Row className="w-75 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="col-12 col-md-6 d-flex justify-content-center align-items-center m-0 p-1 ">
             <div className="postSpotlightDesign">SPOTLIGHT POST</div>
           </Col>
-          <Col className="col-6 d-flex justify-content-center align-items-center m-0 p-0">
+          <Col className="col-md-6 d-flex justify-content-center align-items-center m-0 p-1">
             <Row className="d-flex w-100 m-0 p-0 flex-wrap">
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>{" "}
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
             </Row>
           </Col>
         </Row>
-        <Row className="d-flex w-75 m-0 pb-5 flex-wrap">
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
-            <div className="postDesign">POST</div>
+        <Row className="w-75 d-flex justify-content-center align-items-center pb-5 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
+            <div className="postDesign">POST2</div>
           </Col>
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>{" "}
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>
         </Row>{" "}
         <Row className="w-75 pb-5 d-flex justify-content-center">
-          <Col className="col-6 d-flex justify-content-center align-items-center m-0">
+          <Col className="col-md-6 d-flex justify-content-center align-items-center m-0">
             <div className="bannerContainer text-center w-100">Banner</div>
           </Col>
-          <Col className="col-6 d-flex justify-content-center align-items-center m-0">
+          <Col className="col-md-6 d-flex justify-content-center align-items-center m-0">
             <div className="bannerContainer text-center w-100">Banner</div>
           </Col>
         </Row>
-        <Row className="w-75 d-flex justify-content-start align-items-start">
-         
-          <Col className="col-6 d-flex justify-content-center align-items-center m-0 p-0">
+        <Row className="w-75 d-flex justify-content-center align-items-center">
+          <Col className="col-md-6 d-flex justify-content-center align-items-center m-0 p-1">
             <Row className="d-flex w-100 m-0 p-0 flex-wrap">
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>{" "}
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
-              <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+              <Col className="postsContainer col-12 col-md-6  p-1 d-flex justify-content-center align-items-center m-0">
                 <div className="postDesign">POST</div>
               </Col>
             </Row>
-          </Col> <Col className="postsContainer col-6 d-flex justify-content-center align-items-center p-0 m-0">
+          </Col>{" "}
+          <Col className="col-12 col-md-6 d-flex justify-content-center align-items-center m-0 p-1 ">
             <div className="postSpotlightDesign">SPOTLIGHT POST</div>
           </Col>
         </Row>
         <Row className="d-flex w-75 m-0 pb-5 flex-wrap">
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>{" "}
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>
-          <Col className="postsContainer col-3 d-flex justify-content-center align-items-center p-0 m-0">
+          <Col className="postsContainer col-12 col-md-3 d-flex justify-content-center align-items-center p-1 m-0">
             <div className="postDesign">POST</div>
           </Col>
         </Row>{" "}

@@ -48,9 +48,7 @@
 .searchButton:hover {
   background-color: rgb(3, 67, 3);
 }
-.postsContainer {
-  background-color: blue;
-}
+
 .postSpotlightDesign {
   height: 20em;
   width: 100%;
