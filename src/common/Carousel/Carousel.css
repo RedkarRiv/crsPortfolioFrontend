@@ -1,5 +1,11 @@
 .carouselSlideContent {
-    background-color: black;
-    width:50em;
-    height: 20em;
+  background-color: black;
+  width: 70vw;
+  height: 20em;
+}
+
+@media (max-width: 576px) {
+  .carouselSlideContent {
+    width: 100vw;
+  }
 }

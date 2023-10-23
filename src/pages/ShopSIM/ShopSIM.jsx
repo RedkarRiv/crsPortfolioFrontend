@@ -2,6 +2,7 @@ import React from "react";
 import "./ShopSIM.css";
 import { Col, Container, Row } from "react-bootstrap";
 import searchIcon from "../../img/searchIcon.png";
+import { CarouselBox } from "../../common/Carousel/Carousel";
 
 export const ShopSIM = () => {
   return (
@@ -10,17 +11,22 @@ export const ShopSIM = () => {
         fluid
         className="d-flex m-0 p-0 align-items-center flex-column BGcheck"
       >
-        <Row className="d-flex p-0 m-0 justify-content-center">
-          <Col className="shopTitle col-12 p-5 text-center">
-            Bienvenido a ShopSIM
+    
+
+        <Row className="w-100 d-flex justify-content-center">
+          <Col className="col-6 d-flex justify-content-center align-items-center m-0 my-4">
+            <CarouselBox />
           </Col>
         </Row>
+
         <Row className="w-100 d-flex p-0 my-2 justify-content-center">
           <Col className="col-10 col-md-4 d-flex p-0">
-            
             <div className="searchLab w-100 d-flex justify-content-between ps-2">
               <img src={searchIcon} className="searchLogo p-1" />
-              <input className="inputSearchDesign ps-2" placeholder="Buscar producto..."/>
+              <input
+                className="inputSearchDesign ps-2"
+                placeholder="Buscar producto..."
+              />
               <div className="searchButton px-3 d-flex justify-content-center align-items-center text-center">
                 Buscar
               </div>
@@ -49,7 +55,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -59,7 +66,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -69,7 +77,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -79,7 +88,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -89,7 +99,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -99,7 +110,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
@@ -109,7 +121,8 @@ export const ShopSIM = () => {
               </div>
               <div className="productAddButton p-1">Añadir a carrito</div>
             </div>
-          </Col><Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-3 col-xl-2  mb-3 d-flex justify-content-center p-2">
             <div className="productCard d-flex flex-column justify-content-between">
               <div className="productImg"></div>
               <div className="productTitle">Titulo de producto</div>
