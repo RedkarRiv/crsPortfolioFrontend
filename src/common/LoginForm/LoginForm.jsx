@@ -65,8 +65,13 @@ export const LoginForm = () => {
         setErrorMessage("");
       })
       .catch((error) => {
-        console.log(error.response.data.message);
-        setErrorMessage(error.response.data.message);
+        console.log(error);
+        if (error?.response?.data?.message) {
+          setErrorMessage(error?.response?.data?.message);
+        }
+        setErrorMessage(
+          "No se ha podido conectar. Contacte con el administrador"
+        );
       });
   };
 
