@@ -2,6 +2,7 @@ import React from "react";
 import "./BlogSIM.css";
 import { Col, Container, Row } from "react-bootstrap";
 import searchIcon from "../../img/searchIcon.png";
+import { CarouselBox } from "../../common/Carousel/Carousel";
 
 export const BlogSIM = () => {
   return (
@@ -16,8 +17,10 @@ export const BlogSIM = () => {
           </Col>
         </Row>
         <Row className="w-100 d-flex justify-content-center">
-          <Col className="col-12 d-flex justify-content-center align-items-center m-0">
-            <div className="carrouselContail text-center">Carrousel</div>
+          <Col className="col-6 d-flex justify-content-center align-items-center m-0">
+            {/* <div className="carrouselContail text-center">Carrousel</div> */}
+
+            <CarouselBox/>
           </Col>
         </Row>
         <Row className="w-100 d-flex justify-content-center my-4">

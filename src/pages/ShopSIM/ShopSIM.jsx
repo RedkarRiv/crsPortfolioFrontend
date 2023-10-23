@@ -17,8 +17,10 @@ export const ShopSIM = () => {
         </Row>
         <Row className="w-100 d-flex p-0 my-2 justify-content-center">
           <Col className="col-10 col-md-4 d-flex p-0">
+            
             <div className="searchLab w-100 d-flex justify-content-between ps-2">
               <img src={searchIcon} className="searchLogo p-1" />
+              <input className="inputSearchDesign ps-2" placeholder="Buscar producto..."/>
               <div className="searchButton px-3 d-flex justify-content-center align-items-center text-center">
                 Buscar
               </div>

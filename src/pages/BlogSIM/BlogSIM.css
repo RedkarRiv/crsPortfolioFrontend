@@ -37,6 +37,13 @@
   border-radius: 1em;
   width: 30em;
 }
+
+.inputSearchDesign {
+  outline: 0;
+  border: 0;
+  width: 100%;
+}
+
 .searchButton {
   background-color: green;
   border-top-right-radius: 1em;
