@@ -108,8 +108,8 @@
     font-size: 100%;
   }
   .pcSIM {
-    width: 15em;
-    height: 10em;
+    width: 18em;
+    height: 11em;
   }
   .mobileSIMContext {
     position: absolute;
@@ -118,7 +118,7 @@
   }
   .mobileSIM {
     background-color: grey;
-    width: 3.5em;
-    height: 6em;
+    width: 5em;
+    height: 8em;
   }
 }

@@ -7,16 +7,20 @@ import AccountAvatar from "../../img/avatarAccount.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataCheck, userout } from "../../pages/userSlice";
-import signatureCRS from "../../img/carlosRedondoSignature.png"
+import signatureCRS from "../../img/carlosRedondoSignature.png";
 
 export const NavbarTop = ({ scrollToTop }) => {
   const navigate = useNavigate();
   //FORM SELECTION
   const handleRegisterClickRegister = () => {
+    scrollToTop();
+
     navigate("/authform?formSelection=0");
   };
 
   const handleRegisterClickLogin = () => {
+    scrollToTop();
+
     navigate("/authform?formSelection=1");
   };
 
@@ -33,6 +37,7 @@ export const NavbarTop = ({ scrollToTop }) => {
   //LOGOUT
   const logOut = () => {
     dispatch(userout());
+    scrollToTop();
     navigate("/");
   };
 
@@ -52,7 +57,11 @@ export const NavbarTop = ({ scrollToTop }) => {
             }}
             className="logoDesign"
           >
-            <img alt="Carlos Redondo" className="signatureDesign" src={signatureCRS}/>
+            <img
+              alt="Carlos Redondo"
+              className="signatureDesign"
+              src={signatureCRS}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

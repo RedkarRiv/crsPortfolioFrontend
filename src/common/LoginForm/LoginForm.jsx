@@ -69,9 +69,6 @@ export const LoginForm = () => {
         if (error?.response?.data?.message) {
           setErrorMessage(error?.response?.data?.message);
         }
-        setErrorMessage(
-          "No se ha podido conectar. Contacte con el administrador"
-        );
       });
   };
 
@@ -84,14 +81,14 @@ export const LoginForm = () => {
           type="text"
           placeholder="Introduce tu email"
           name="email"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           functionHandler={(e) => InputHandler(e)}
           onBlurFunction={(e) => InputCheck(e)}
         />
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           name="password"
           functionHandler={(e) => InputHandler(e)}
           placeholder="Introduce tu password"

@@ -22,8 +22,8 @@ export const RegisterForm = () => {
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
   const [newCredentialsError, setNewCredentialsError] = useState({
-    firstName: "",
-    lastName: "",
+    firstNameError: "",
+    lastNameError: "",
     emailError: "",
     passwordError: "",
     doubleCheckPasswordError: "",
@@ -100,7 +100,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Nombre</div>
         <InputLabel
           type="text"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           name="firstName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu nombre"
@@ -112,7 +112,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Apellido</div>
         <InputLabel
           type="text"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           name="lastName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu apellido"
@@ -124,7 +124,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">E-mail</div>
         <InputLabel
           type="text"
-          placeholder="Introduce tu email"
+          placeholder="Introduce tu email rounded"
           name="email"
           classDesign="w-75 text-center"
           functionHandler={(e) => InputHandlerRegister(e)}
@@ -136,7 +136,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           name="password"
           autoComplete="current-password"
           functionHandler={(e) => InputHandlerRegister(e)}
@@ -149,7 +149,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Repite Password</div>
         <InputLabel
           type="password"
-          classDesign="w-75 text-center"
+          classDesign="w-75 text-center rounded"
           name="doubleCheckPassword"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Repite tu password"

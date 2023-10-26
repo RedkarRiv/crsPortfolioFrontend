@@ -1,5 +1,5 @@
 .contactSlideBG {
-  min-height: 90vh;
+
   background-color: rgb(28, 27, 39);
 }
 
@@ -17,4 +17,12 @@
     width: 100%;
     height: auto;
   }
+}
+
+
+.errorContactDesign {
+color: rgb(240, 65, 65)}
+
+.informationContactForm {
+  color: rgb(68, 255, 0);
 }

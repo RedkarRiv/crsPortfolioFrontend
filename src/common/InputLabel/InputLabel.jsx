@@ -8,6 +8,7 @@ export const InputLabel = ({
   classDesign,
   functionHandler,
   onBlurFunction,
+  value,
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ export const InputLabel = ({
         name={name}
         onChange={(e) => functionHandler(e)}
         onBlur={(e) => onBlurFunction(e)}
+        value={value}
       />
     </>
   );
