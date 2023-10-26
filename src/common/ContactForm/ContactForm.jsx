@@ -16,7 +16,7 @@ export const ContactForm = ({ id }) => {
           <InputLabel
             type="text"
             maxLength={20}
-            classDesign="w-75 text-center"
+            classDesign="w-75 text-center rounded p-1"
             name="firstName"
             functionHandler={(e) => InputHandlerRegister(e)}
             placeholder="Introduce tu nombre"
@@ -28,14 +28,14 @@ export const ContactForm = ({ id }) => {
             placeholder="Introduce tu email"
             name="email"
             maxLength={20}
-            classDesign="w-75 text-center"
+            classDesign="w-75 text-center rounded p-1"
             functionHandler={(e) => InputHandlerRegister(e)}
             onBlurFunction={(e) => InputRegisterCheck(e)}
           />
           <div className="fieldNameDesign">Comentario</div>
           <textarea
             type="textarea"
-            className="commentInputDesign w-75 text-start"
+            className="commentInputDesign w-75 text-start rounded p-2"
             name="comment"
             maxLength={500}
             rows={6}

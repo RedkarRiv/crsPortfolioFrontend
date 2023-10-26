@@ -10,12 +10,6 @@
 
 .commentInputDesign {
   max-height: 15em;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.3em;
-  padding: 0.3em;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 @media (max-width: 576px) {
