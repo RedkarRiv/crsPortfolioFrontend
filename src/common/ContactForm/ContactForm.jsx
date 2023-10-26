@@ -87,7 +87,7 @@ export const ContactForm = ({ id }) => {
                 maxLength={20}
                 classDesign="w-75 text-center rounded p-1"
                 name="name"
-                value={resetForm ? "" : newContact.name}
+                value={newContact.name}
                 functionHandler={(e) => InputHandlerContact(e)}
                 placeholder="Introduce tu nombre"
                 onBlurFunction={(e) => InputContactCheck(e)}
@@ -100,7 +100,7 @@ export const ContactForm = ({ id }) => {
                 type="text"
                 placeholder="Introduce tu email"
                 name="email"
-                value={resetForm ? "" : newContact.email}
+                value={newContact.email}
                 maxLength={20}
                 classDesign="w-75 text-center rounded p-1"
                 functionHandler={(e) => InputHandlerContact(e)}
@@ -116,7 +116,7 @@ export const ContactForm = ({ id }) => {
                 name="message"
                 maxLength={500}
                 rows={6}
-                value={resetForm ? "" : newContact.message}
+                value={newContact.message}
                 placeholder="Escribe tu comentario"
                 onBlur={(e) => InputContactCheck(e)}
                 onChange={(e) => InputHandlerContact(e)}
