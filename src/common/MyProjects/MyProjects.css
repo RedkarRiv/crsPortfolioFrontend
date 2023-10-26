@@ -1,10 +1,8 @@
 .myProjectsBG {
   width: 100%;
-  min-height: 100vh;  
+  min-height: 100vh;
   background-color: #1b2b51;
-
 }
-
 
 .projectTitle {
   font-weight: bold;
@@ -39,8 +37,8 @@
   border-top: 0.4em solid black;
   border-bottom: 0.6em solid black;
   border-right: 0.2em solid black;
-  border-left: 0.2em solid black;  border-radius: 0.3em;
-
+  border-left: 0.2em solid black;
+  border-radius: 0.3em;
 }
 
 .projectDescription {

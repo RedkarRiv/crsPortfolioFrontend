@@ -100,7 +100,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Nombre</div>
         <InputLabel
           type="text"
-          classDesign=""
+          classDesign="w-75 text-center"
           name="firstName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu nombre"
@@ -112,7 +112,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Apellido</div>
         <InputLabel
           type="text"
-          classDesign=""
+          classDesign="w-75 text-center"
           name="lastName"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Introduce tu apellido"
@@ -126,7 +126,7 @@ export const RegisterForm = () => {
           type="text"
           placeholder="Introduce tu email"
           name="email"
-          classDesign=""
+          classDesign="w-75 text-center"
           functionHandler={(e) => InputHandlerRegister(e)}
           onBlurFunction={(e) => InputRegisterCheck(e)}
         />
@@ -136,7 +136,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign=""
+          classDesign="w-75 text-center"
           name="password"
           autoComplete="current-password"
           functionHandler={(e) => InputHandlerRegister(e)}
@@ -149,7 +149,7 @@ export const RegisterForm = () => {
         <div className="fieldNameDesign">Repite Password</div>
         <InputLabel
           type="password"
-          classDesign=""
+          classDesign="w-75 text-center"
           name="doubleCheckPassword"
           functionHandler={(e) => InputHandlerRegister(e)}
           placeholder="Repite tu password"

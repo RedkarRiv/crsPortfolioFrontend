@@ -84,14 +84,14 @@ export const LoginForm = () => {
           type="text"
           placeholder="Introduce tu email"
           name="email"
-          classDesign=""
+          classDesign="w-75 text-center"
           functionHandler={(e) => InputHandler(e)}
           onBlurFunction={(e) => InputCheck(e)}
         />
         <div className="fieldNameDesign">Password</div>
         <InputLabel
           type="password"
-          classDesign=""
+          classDesign="w-75 text-center"
           name="password"
           functionHandler={(e) => InputHandler(e)}
           placeholder="Introduce tu password"
