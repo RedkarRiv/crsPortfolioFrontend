@@ -12,7 +12,7 @@ import WWSimg_mb from "../img/WWS_img_mobile_rs.png";
 
 const projectsPortfolio = [
     {
-      title: "WWS helpdesk",
+      title: "WWS Helpdesk",
       imgPC: WWSimg,
       imgMobile: WWSimg_mb,
       repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",

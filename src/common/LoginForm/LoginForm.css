@@ -1,24 +1,22 @@
-
 .formDesign {
-    padding: 0.8em;
-    border-radius: 0.5em;
-  }
-    
-  .fieldNameDesign {
-    color: white;
-    margin-top: 0.5em;
+  padding: 0.8em;
+  border-radius: 0.5em;
+}
 
-  }
-  .titleDesign {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    font-size:2em;
-    margin-bottom: 0.5em;
-  }
-  
-  .errorMessageDesign {
-    color: rgb(255, 51, 0);
-  }
+.fieldNameDesign {
+  color: white;
+  margin-top: 0.5em;
+}
+.titleDesign {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.errorMessageDesign {
+  color: rgb(255, 51, 0);
+}

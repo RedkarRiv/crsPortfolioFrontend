@@ -5,6 +5,7 @@ import { InputLabel } from "../../common/InputLabel/InputLabel";
 import { Button } from "../../common/Button/Button";
 import { CheckError } from "../../services/useful";
 import { contactMe } from "../../services/apiCall";
+import { Col, Row } from "react-bootstrap";
 
 export const ContactForm = ({ id }) => {
   //RESET FORM
@@ -73,61 +74,69 @@ export const ContactForm = ({ id }) => {
   return (
     <>
       <div
+        className="contactSlideBG d-flex justify-content-center align-items-center p-0 mt-3"
         id={id}
-        className="contactSlideBG d-flex justify-content-center align-items-center py-5"
       >
-        <form className="contactFormDesign p-4 d-flex flex-column justify-content-center align-items-center">
-          <div className="titleDesign">CONTACTO</div>
-          <div className="fieldNameDesign">Nombre</div>
-          <InputLabel
-            type="text"
-            maxLength={20}
-            classDesign="w-75 text-center rounded p-1"
-            name="name"
-            value={resetForm ? "" : newContact.name}
-            functionHandler={(e) => InputHandlerContact(e)}
-            placeholder="Introduce tu nombre"
-            onBlurFunction={(e) => InputContactCheck(e)}
-          />{" "}
-          <div className="errorContactDesign">{newContactError.nameError}</div>
-          <div className="fieldNameDesign">E-mail</div>
-          <InputLabel
-            type="text"
-            placeholder="Introduce tu email"
-            name="email"
-            value={resetForm ? "" : newContact.email}
-            maxLength={20}
-            classDesign="w-75 text-center rounded p-1"
-            functionHandler={(e) => InputHandlerContact(e)}
-            onBlurFunction={(e) => InputContactCheck(e)}
-          />
-          <div className="errorContactDesign">{newContactError.emailError}</div>
-          <div className="fieldNameDesign">Comentario</div>
-          <textarea
-            type="textarea"
-            className="commentInputDesign w-75 text-start rounded p-2"
-            name="message"
-            maxLength={500}
-            rows={6}
-            value={resetForm ? "" : newContact.message}
-            placeholder="Escribe tu comentario"
-            onBlur={(e) => InputContactCheck(e)}
-            onChange={(e) => InputHandlerContact(e)}
-          />
-          <div>{newContactError.messageError}</div>
-          <div className="informationContactForm">
-            <div className="p-1">{feedbackMessage}</div>
-          </div>
-          <Button
-            className="buttonAuthColor my-2"
-            name="Enviar mensaje"
-            path=""
-            functionButton={(e) => sendContactHandler(e)}
-          />
-          <div className="errorContactDesign">
-            <p>{errorMessage}</p>
-          </div>
-        </form>
+        <Row className="contactFormDesign m-0 w-100 d-flex justify-content-center">
+          <Col className="col-12 col-md-6 m-0 p-0 d-flex flex-column justify-content-center align-items-center">
+            <form className="d-flex flex-column justify-content-center align-items-center w-100">
+              <div className="fs-1 text-light fw-bold mb-3 mt-5">CONTACTO</div>
+              <div className="my-1 text-light fw-bold">Nombre</div>
+              <InputLabel
+                type="text"
+                maxLength={20}
+                classDesign="w-75 text-center rounded p-1"
+                name="name"
+                value={resetForm ? "" : newContact.name}
+                functionHandler={(e) => InputHandlerContact(e)}
+                placeholder="Introduce tu nombre"
+                onBlurFunction={(e) => InputContactCheck(e)}
+              />{" "}
+              <div className="errorContactDesign">
+                {newContactError.nameError}
+              </div>
+              <div className="my-1 text-light fw-bold">E-mail</div>
+              <InputLabel
+                type="text"
+                placeholder="Introduce tu email"
+                name="email"
+                value={resetForm ? "" : newContact.email}
+                maxLength={20}
+                classDesign="w-75 text-center rounded p-1"
+                functionHandler={(e) => InputHandlerContact(e)}
+                onBlurFunction={(e) => InputContactCheck(e)}
+              />
+              <div className="errorContactDesign">
+                {newContactError.emailError}
+              </div>
+              <div className="my-1 text-light fw-bold">Comentario</div>
+              <textarea
+                type="textarea"
+                className="commentInputDesign w-75 text-start rounded p-2"
+                name="message"
+                maxLength={500}
+                rows={6}
+                value={resetForm ? "" : newContact.message}
+                placeholder="Escribe tu comentario"
+                onBlur={(e) => InputContactCheck(e)}
+                onChange={(e) => InputHandlerContact(e)}
+              />
+              <div>{newContactError.messageError}</div>
+              <div className="informationContactForm">
+                <div className="p-1">{feedbackMessage}</div>
+              </div>
+              <Button
+                className="buttonAuthColor my-2"
+                name="Enviar mensaje"
+                path=""
+                functionButton={(e) => sendContactHandler(e)}
+              />
+              <div className="errorContactDesign">
+                <p>{errorMessage}</p>
+              </div>
+            </form>
+          </Col>
+        </Row>
       </div>
     </>
   );

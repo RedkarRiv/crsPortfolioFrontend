@@ -1,11 +1,14 @@
 .contactSlideBG {
-
-  background-color: rgb(0, 0, 0);
+  height: auto;
+  background-image: url(../../img/bgTech1.jpg);
+  background-color: rgb(255, 255, 255);
+  background-size: 100%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
 }
 
 .contactFormDesign {
-  width: 50%;
-  height: auto;
+  background-color: rgba(0, 0, 0, 0.653);
 }
 
 .commentInputDesign {
@@ -13,15 +16,19 @@
 }
 
 @media (max-width: 576px) {
+  .contactSlideBG {
+    background-size: 200% 100%;
+  }
+
   .contactFormDesign {
     width: 100%;
     height: auto;
   }
 }
 
-
 .errorContactDesign {
-color: rgb(240, 65, 65)}
+  color: rgb(240, 65, 65);
+}
 
 .informationContactForm {
   color: rgb(68, 255, 0);

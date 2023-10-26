@@ -59,10 +59,8 @@ export const Home = () => {
             />
           </Col>
         </Row>
-        <div id="aboutMe" className="py-3"></div>
-        <AboutMeSlide />
-        <div id="CRSProjects" className="py-3"></div>
-        <MyProjects />
+        <AboutMeSlide id="aboutMe" />
+        <MyProjects id="CRSProjects"/>
         <ContactForm id="contactMe" />
       </Container>
     </>
