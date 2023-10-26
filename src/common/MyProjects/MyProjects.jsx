@@ -4,7 +4,9 @@ import { Col, Row } from "react-bootstrap";
 import dentalClinicFront from "../../img/dentalClinicFront_img.png";
 import dentalClinicBack from "../../img/dentalClinicBack_img.png";
 import MasterMind from "../../img/MasterMind_img.png";
+import MasterMindMobile from "../../img/MasterMind_img_mobile.png";
 import Devstaurante from "../../img/Devstaurante_img.png";
+import DevstauranteMobile from "../../img/Devstaurante_img_mobile.png";
 import GBColor from "../../img/GBC_img.png";
 import { Button } from "../Button/Button";
 import WWSimg from "../../img/WWS_img_rs.png";
@@ -18,34 +20,34 @@ const projectsPortfolio = [
     repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
   },
   {
-    title: "WWS helpdesk",
-    imgPC: WWSimg,
-    imgMobile: WWSimg_mb,
+    title: "Dental Clinic Backend",
+    imgPC: dentalClinicBack,
+    imgMobile: undefined,
+    repo: "https://github.com/RedkarRiv/REACT_DentalClinic",
+  },
+  {
+    title: "Dental Clinic Frontend",
+    imgPC: dentalClinicFront,
+    imgMobile: undefined,
     repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
   },
   {
-    title: "WWS helpdesk",
-    imgPC: WWSimg,
-    imgMobile: WWSimg_mb,
-    repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
+    title: "Devstaurante",
+    imgPC: Devstaurante,
+    imgMobile: DevstauranteMobile,
+    repo: "https://github.com/RedkarRiv/Rest_Project",
   },
   {
-    title: "WWS helpdesk",
-    imgPC: WWSimg,
-    imgMobile: WWSimg_mb,
-    repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
+    title: "MasterMind",
+    imgPC: MasterMind,
+    imgMobile: MasterMindMobile,
+    repo: "https://github.com/RedkarRiv/MasterMind",
   },
   {
-    title: "WWS helpdesk",
-    imgPC: WWSimg,
-    imgMobile: WWSimg_mb,
-    repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
-  },
-  {
-    title: "WWS helpdesk",
-    imgPC: WWSimg,
-    imgMobile: WWSimg_mb,
-    repo: "https://github.com/RedkarRiv/ClinicaDental_BackEnd_CRS",
+    title: "Game Boy Color SIM",
+    imgPC: GBColor,
+    imgMobile: undefined,
+    repo: "https://github.com/RedkarRiv/GH_FSD_GBC",
   },
 ];
 
@@ -82,13 +84,15 @@ export const MyProjects = ({ id }) => {
                           alt={item.title}
                           className="backgroundImage"
                         />
-                        <div className="mobileSIM">
-                          <img
-                            src={item.imgMobile}
-                            alt={item.title}
-                            className="backgroundImageMobile"
-                          />
-                        </div>
+                        {item.imgMobile ? (
+                          <div className="mobileSIM">
+                            <img
+                              src={item.imgMobile}
+                              alt={item.title}
+                              className="backgroundImageMobile"
+                            />
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>
