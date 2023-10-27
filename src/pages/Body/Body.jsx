@@ -8,6 +8,7 @@ import { ProfilePanel } from "../ProfilePanel/ProfilePanel";
 export const Body = () => {
   return (
     <>
+    <div></div>
       <Routes>
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Home />} />
