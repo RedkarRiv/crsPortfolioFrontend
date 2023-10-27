@@ -36,7 +36,7 @@ export const Home = () => {
         <Row className="buttonHomeContainer d-flex justify-content-center align-items-center w-100 p-0 m-0 mb-5">
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
-              className="buttonHomeColor text-center"
+              className="buttonHomeColor text-center fs-5"
               path=""
               name="Acerca de mí"
               functionButton={(e) => scrollToSection("aboutMe")}
@@ -44,7 +44,7 @@ export const Home = () => {
           </Col>
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
-              className="buttonHomeColor"
+              className="buttonHomeColor text-center fs-5"
               name="Proyectos"
               path=""
               functionButton={(e) => scrollToSection("CRSProjects")}
@@ -52,7 +52,7 @@ export const Home = () => {
           </Col>
           <Col className="col-7 h-25 col-md-2 mb-0 mb-xs-3">
             <Button
-              className="buttonHomeColor"
+              className="buttonHomeColor text-center fs-5"
               name="Contacto"
               path=""
               functionButton={(e) => scrollToSection("contactMe")}

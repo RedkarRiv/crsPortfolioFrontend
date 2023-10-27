@@ -21,6 +21,7 @@ export const MyProfile = () => {
   const getMyProfile = () => {
     getProfile(credentialCheck)
       .then((resultado) => {
+        console.log(resultado)
         if (resultado.data.message == "Token invalido") {
           navigate("/");
           return;
@@ -81,7 +82,7 @@ export const MyProfile = () => {
           <div className="d-flex my-2 w-75 justify-content-center align-items-center">
             <InputLabel
               type="text"
-              classDesign="intputSize"
+              classDesign="intputSize rounded"
               name="firstName"
               functionHandler={(e) => InputHandlerRegister(e)}
               placeholder="Nuevo nombre"
@@ -114,7 +115,7 @@ export const MyProfile = () => {
           <div className="inputBox d-flex my-2 w-75  justify-content-center align-items-center">
             <InputLabel
               type="text"
-              classDesign="intputSize"
+              classDesign="intputSize rounded"
               name="lastName"
               functionHandler={(e) => InputHandlerRegister(e)}
               placeholder="Nuevo apellido"
@@ -154,7 +155,7 @@ export const MyProfile = () => {
             <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
-                classDesign="me-3 intputSize"
+                classDesign="me-3 intputSize rounded p-1"
                 name="password"
                 functionHandler={(e) => InputHandlerRegister(e)}
                 placeholder="Nueva contraseña"
@@ -164,7 +165,7 @@ export const MyProfile = () => {
             <div className="d-flex my-2 w-75 justify-content-center align-items-center">
               <InputLabel
                 type="password"
-                classDesign="me-3 intputSize"
+                classDesign="me-3 intputSize rounded p-1"
                 name="password1"
                 functionHandler={(e) => InputHandlerRegister(e)}
                 placeholder="Confirmar nueva contraseña"
