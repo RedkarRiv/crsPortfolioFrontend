@@ -1,14 +1,13 @@
 .contactSlideBG {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../../img/bgTech6.webp);
-  background-color: rgb(255, 255, 255);
   background-size: 100%;
   background-position: 0% 50%;
   background-repeat: no-repeat;
 }
 
 .contactFormDesign {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.54);
 }
 
