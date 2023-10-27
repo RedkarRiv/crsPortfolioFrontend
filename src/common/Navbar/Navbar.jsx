@@ -78,12 +78,6 @@ export const NavbarTop = ({ scrollToTop }) => {
                 </div>
                 <div
                   className="navbarOptionDesign"
-                  onClick={() => navigate("/blog")}
-                >
-                  BlogSIM
-                </div>
-                <div
-                  className="navbarOptionDesign"
                   onClick={() => navigate("/shop")}
                 >
                   ShopSIM
