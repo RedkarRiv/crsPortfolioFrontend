@@ -1,18 +1,22 @@
 .myProjectsBG {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  background-color: black;
+  /* background-image: url(../../img/techPattern.jpg);
   background-image: url(../../img/bgTech3.jpg);
+
   background-size: cover;
-  background-position: 0% 50%;
-  height: auto;
+  background-position: 0% 50%; */
 
 }
 
 .myProjectsSlideDesign {
-  background-color: rgba(2, 1, 16, 0.543);
+  background-color: rgb(0, 0, 0);
 
 }
-
+.projectContainer {
+  background-color: rgb(211, 213, 217);
+}
 .techElement {
   background-color: yellow;
   height: 1.5em;
@@ -58,8 +62,8 @@
 @media (max-width: 576px) {
 
   .pcSIM {
-    width: 18em;
-    height: 11em;
+    width: 16em;
+    height: 10em;
   }
   .mobileSIMContext {
     position: absolute;
