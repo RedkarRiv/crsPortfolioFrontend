@@ -79,7 +79,6 @@ export const MyProfile = () => {
           </>
         ) : (
           <div className="d-flex my-2 w-75 justify-content-center align-items-center">
-
             <InputLabel
               type="text"
               classDesign="intputSize"
@@ -88,9 +87,9 @@ export const MyProfile = () => {
               placeholder="Nuevo nombre"
               onBlurFunction={(e) => InputRegisterCheck(e)}
             />
-                        <div
-            className="updateIcon ms-5"
-            onClick={() => handleEnableEditingDataName()}
+            <div
+              className="updateIcon ms-5"
+              onClick={() => handleEnableEditingDataName()}
             >
               ✎
             </div>
@@ -113,7 +112,6 @@ export const MyProfile = () => {
           </>
         ) : (
           <div className="inputBox d-flex my-2 w-75  justify-content-center align-items-center">
-           
             <InputLabel
               type="text"
               classDesign="intputSize"
@@ -121,12 +119,13 @@ export const MyProfile = () => {
               functionHandler={(e) => InputHandlerRegister(e)}
               placeholder="Nuevo apellido"
               onBlurFunction={(e) => InputRegisterCheck(e)}
-            />           <div
-            className="updateIcon ms-5"
-            onClick={() => handleEnableEditingDataLastname()}
-          >
-            ✎
-          </div>
+            />{" "}
+            <div
+              className="updateIcon ms-5"
+              onClick={() => handleEnableEditingDataLastname()}
+            >
+              ✎
+            </div>
           </div>
         )}
       </div>

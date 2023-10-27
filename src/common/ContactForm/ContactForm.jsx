@@ -8,9 +8,6 @@ import { contactMe } from "../../services/apiCall";
 import { Col, Row } from "react-bootstrap";
 
 export const ContactForm = ({ id }) => {
-  //RESET FORM
-  const [resetForm, setResetForm] = useState(false);
-
   //CHECK FIELDS
   const [errorMessage, setErrorMessage] = useState("");
   const [newContactError, setNewContactError] = useState({
@@ -18,6 +15,12 @@ export const ContactForm = ({ id }) => {
     emailError: "",
     messageError: "",
   });
+
+  const initialContact = {
+    name: "",
+    email: "",
+    message: "",
+  };
 
   const InputContactCheck = (e) => {
     const inputValue = e.target.value;
@@ -40,11 +43,7 @@ export const ContactForm = ({ id }) => {
   //CONTACT
   const [feedbackMessage, setFeedbackMessage] = useState("");
 
-  const [newContact, setNewContact] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [newContact, setNewContact] = useState({ initialContact });
 
   const InputHandlerContact = (e) => {
     setNewContact((prevState) => ({
@@ -59,11 +58,11 @@ export const ContactForm = ({ id }) => {
       .then((resultado) => {
         console.log(resultado);
         setErrorMessage("");
+        setNewContact(initialContact);
         setFeedbackMessage(resultado.data.message);
-        setResetForm(true);
         setTimeout(() => {
           setFeedbackMessage("");
-        }, 10000);
+        }, 15000);
       })
       .catch((error) => {
         console.log(error);
