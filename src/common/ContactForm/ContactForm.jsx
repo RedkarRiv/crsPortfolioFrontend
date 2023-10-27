@@ -73,10 +73,10 @@ export const ContactForm = ({ id }) => {
   return (
     <>
       <div
-        className="contactSlideBG d-flex justify-content-center align-items-center p-0 mt-3"
+        className="contactSlideBG d-flex justify-content-center align-items-center p-0 m-0"
         id={id}
       >
-        <Row className="contactFormDesign m-0 w-100 d-flex justify-content-center">
+        <Row className="contactFormDesign m-0 py-5 w-100 d-flex justify-content-center h-100">
           <Col className="col-12 col-md-6 m-0 p-0 d-flex flex-column justify-content-center align-items-center">
             <form className="d-flex flex-column justify-content-center align-items-center w-100">
               <div className="fs-1 text-light fw-bold mb-3 mt-5">CONTACTO</div>

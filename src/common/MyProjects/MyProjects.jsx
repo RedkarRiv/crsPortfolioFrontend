@@ -8,9 +8,9 @@ export const MyProjects = ({ id }) => {
   return (
     <div
       id={id}
-      className="myProjectsBG d-flex justify-content-center p-0 mt-3"
+      className="myProjectsBG d-flex justify-content-center p-0 m-0"
     >
-      <Row className="myProjectsSlideDesign d-flex justify-content-center m-0 pt-5 pb-3">
+      <Row className="myProjectsSlideDesign d-flex justify-content-center py-5">
         <Col className="col-12 fs-1 fw-bold d-flex text-center text-light justify-content-center align-items-center py-3 px-0 mt-3">
           Mis proyectos{" "}
         </Col>

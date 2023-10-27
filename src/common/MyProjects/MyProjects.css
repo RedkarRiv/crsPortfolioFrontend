@@ -1,21 +1,17 @@
 .myProjectsBG {
   width: 100%;
   min-height: 100vh;
-  background-color: black;
-  /* background-image: url(../../img/techPattern.jpg);
-  background-image: url(../../img/bgTech3.jpg);
-
+  background-image: url(../../img/bgTech7.jpg);
   background-size: cover;
-  background-position: 0% 50%; */
-
+  background-repeat: no-repeat;
 }
 
 .myProjectsSlideDesign {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(3, 15, 40, 0.716);
 
 }
 .projectContainer {
-  background-color: rgb(211, 213, 217);
+  background-color: rgba(255, 255, 255, 0.644);
 }
 .techElement {
   background-color: yellow;
